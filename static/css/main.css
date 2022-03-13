@@ -1,0 +1,151 @@
+* {
+    font-family: "Open Sans";
+}
+
+body {
+    margin: 0;
+}
+
+header, main, footer{
+    display: grid;
+    grid-template-columns: 1fr 74em 1fr;
+}
+
+footer {
+    background-color: #212885;
+}
+
+.footer-grid {
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header h1 {
+    grid-column: 2;
+}
+
+nav {
+    margin: 0;
+    grid-column: 2 / 3;
+}
+
+#nav-left {
+    grid-column: 1;
+    background-color: #616dd8;
+}
+
+#nav-right {
+    grid-column: 3;
+    background-color: #616dd8;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #212885;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.nav-item {
+    height: 4rem;
+}
+
+.nav-item:hover {
+    background-color: #020073;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+main section {
+    margin: 0 0 1vw 0;
+    grid-column: 2;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 2rem 1.5rem;
+}
+
+h3 {
+    margin: 0;
+}
+
+.grid-content-3x1fr {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-content-2x1fr {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-content-3fr-1fr {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.article-grid {
+    padding: 1.5rem;
+}
+
+.highlight {
+    background-color: rgba(0, 8, 115, 0.1);
+}
+
+.main-text {
+    padding: 0 1.5rem;
+}
+
+@media only screen and (max-width: 75em) {
+    .grid, header, footer, main{
+        grid-template-columns: 2vw 1fr 2vw;
+    }
+}
+
+@media only screen and (max-width: 57em) {
+    nav ul{
+        grid-template-columns: repeat(3,1fr);
+    }
+    nav {
+        grid-column: 1 / 4;
+    }
+    .grid-content-3fr-1fr {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid{
+        grid-template-columns: 1fr;
+    }
+
+    main section {
+        grid-column: 1 / 4;
+    }
+}
