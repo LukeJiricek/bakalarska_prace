@@ -131,11 +131,8 @@ h3 {
 
 #image {
     max-width: 532px;
+    max-height: 600px;
     padding: 1.5rem;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 #image-article {
@@ -145,12 +142,21 @@ h3 {
     width: 580px;
 }
 
-#attribute-article {
+#attribute-form {
     grid-row: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1rem;
+    height: 200px;
+}
+
+form input {
+   text-align: center;
+}
+
+form button {
+    text-align: center;
 }
 
 @media only screen and (max-width: 75em) {
@@ -172,7 +178,7 @@ h3 {
 }
 
 @media only screen and (max-width: 50em) {
-    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid{
+    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid #image-grid{
         grid-template-columns: 1fr;
     }
 

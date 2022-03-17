@@ -3,7 +3,7 @@
     <h2>Dotazník</h2>
     <div id="image-grid">
         <article id="image-article" class="article-grid">
-            <img id="image" class="highlight" src="../static/img/chair/Chair 2.jpg">
+            <img id="image" class="highlight" src="{{ current_image }}">
         </article>
         <article class="article-grid highlight">
             <h3>Popis atributů</h3>
@@ -11,8 +11,16 @@
                 Donec vitae arcu. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Fusce aliquam vestibulum ipsum. Quisque tincidunt scelerisque libero. Maecenas lorem.                        
             </p>
         </article>
-        <article id="attribute-article" class="article-grid highlight">
-            
-        </article>
+        <form method="POST" id="attribute-form" class="article-grid highlight">
+            <input type="text" name="atribut-1"/>
+            <input type="text" name="atribut-2"/>
+            <input type="text" name="atribut-3"/>
+            <input type="text" name="atribut-4"/>
+            <input type="text" name="atribut-5"/>
+            <input type="text" name="atribut-6"/>
+            <button type="submit" name="action" value="reset">Více atributů</button>
+            <button type="submit" name="action" value="next">Další obrázek</button>
+            <input type="hidden" name="imageID" value="{{ image_ID }}">
+        </form>
     <div>
 {% endblock %}
