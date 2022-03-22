@@ -1,22 +1,19 @@
 from flask import Flask,render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
-from os import path
+import os
+
 
 db = SQLAlchemy()
-DB_NAME = "database.db"
+
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://tncbhgirdjkurb:5a1c4af375a64ceacbc518fe411d29c244605d1dd6aff78d80489ffd9ce51b4d@ec2-54-208-96-16.compute-1.amazonaws.com:5432/d8lnl8quucc1j8'
+    #print(os.environ['DATABASE_URL'])
     db.init_app(app)
-    create_database(app)
     return app
 
-def create_database(app):
-    if not path.exists(DB_NAME):
-        db.create_all(app=app)
-        print('Created Database!')
 
 
 app = create_app()
