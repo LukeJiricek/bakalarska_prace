@@ -2,15 +2,19 @@ from flask import Flask,render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
 import os
+import re
 
 
 db = SQLAlchemy()
 
+# $env:DATABASE_URL=$(heroku config:get DATABASE_URL -a obrazkovy-dataset)
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://tncbhgirdjkurb:5a1c4af375a64ceacbc518fe411d29c244605d1dd6aff78d80489ffd9ce51b4d@ec2-54-208-96-16.compute-1.amazonaws.com:5432/d8lnl8quucc1j8'
-    #print(os.environ['DATABASE_URL'])
+    DB_URL = os.environ['DATABASE_URL']
+    if DB_URL.startswith("postgres://"):
+        DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
     db.init_app(app)
     return app
 
