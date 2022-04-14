@@ -6,9 +6,12 @@
             <img id="image" class="highlight" src="{{ current_image }}">
         </article>
         <article class="article-grid highlight">
-            <h3>Popis atributů</h3>
+            <h3>Jak dotazník vyplňovat a co to je atribut</h3>
             <p>
-                Donec vitae arcu. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Fusce aliquam vestibulum ipsum. Quisque tincidunt scelerisque libero. Maecenas lorem.                        
+                V dotazníku se nachází objekt na obrázku. Váš úkol je popsat zobrazený objekt pomocí co nejvíce vlastností, neboli atributů.
+            </p>
+            <p>
+                <b>Co to je atribut?</b> Za atribut objektu bereme jakoukoli vlastnost kterou můžeme daný zobrazený objekt popsat. 
             </p>
         </article>
         <form method="POST" id="attribute-form" class="article-grid highlight">
@@ -18,9 +21,16 @@
             <input type="text" name="atribut-4"/>
             <input type="text" name="atribut-5"/>
             <input type="text" name="atribut-6"/>
-            <button type="submit" name="action" value="reset">Více atributů</button>
-            <button type="submit" name="action" value="next">Další obrázek</button>
+            <button id="reset" type="submit" name="action" value="reset" onclick="post_request()">Více atributů</button>
+            <button id="next" type="submit" name="action" value="next" onclick="post_request()">Další obrázek</button>
             <input type="hidden" name="imageID" value="{{ image_ID }}">
+            <input type="hidden" name="requestID" value="{{ request_ID }}">
         </form>
+        <script>
+            function post_request() {
+                document.getElementById("attribute-form").style.pointerEvents = "none";
+                document.getElementById("attribute-form").style.opacity = "0.5";
+            }
+        </script>
     <div>
 {% endblock %}

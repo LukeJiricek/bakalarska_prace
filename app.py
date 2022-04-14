@@ -1,13 +1,15 @@
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import null
 from sqlalchemy.sql.expression import func, select
-import os
-import re
-
+from apscheduler.schedulers.background import BackgroundScheduler
+import os, re, uuid, threading, time
 
 db = SQLAlchemy()
+sem = threading.Semaphore()
+#   RUN ON LOCAL:
+#       $env:DATABASE_URL=$(heroku config:get DATABASE_URL -a obrazkovy-dataset)
 
-# $env:DATABASE_URL=$(heroku config:get DATABASE_URL -a obrazkovy-dataset)
 
 def create_app():
     app = Flask(__name__)
@@ -15,16 +17,51 @@ def create_app():
     if DB_URL.startswith("postgres://"):
         DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
+    app.secret_key = '6e2db44e-2b19-4909-93b4-65ca2e10a135'
     db.init_app(app)
     return app
 
 
 
 app = create_app()
-from models import Object
+from models import Object, http_request
 if __name__ == "__main__":
     app.run(debug=True)
 
+def validate_form(data):
+    if data['action'] == '' or data['imageID'] == '' or data['requestID'] == '' :
+        return False
+    if data['atribut-1'].strip() or data['atribut-2'].strip() or data['atribut-3'].strip() or data['atribut-4'].strip() or data['atribut-5'].strip() or data['atribut-6'].strip() :
+        return True
+    return False
+
+def validate_request_id(data):
+    sem.acquire()
+    current_request = http_request.query.filter_by(request_id=data['requestID']).first()
+    if current_request == None or str(current_request.image_id) != data['imageID']:
+        sem.release()
+        return False
+    else :
+        http_request.query.filter_by(request_id=data['requestID']).delete()
+        db.session.commit()
+        sem.release()
+        return True
+
+def delete_requests():
+    with app.app_context():
+        db.session.execute("delete from http_request where timestamp < now() - interval '30 minutes'")
+        db.session.commit()
+        print("Deleting old requests")
+scheduler = BackgroundScheduler()
+job = scheduler.add_job(delete_requests, 'interval', minutes=15)
+scheduler.start()
+
+def new_request(new_image):
+    request_id=uuid.uuid4()
+    new_http_request = http_request(request_id=request_id, image_id=new_image)
+    db.session.add(new_http_request)
+    db.session.commit()
+    return request_id
 
 
 
@@ -35,15 +72,22 @@ def index():
 @app.route("/form", methods=['GET', 'POST'])
 def form():
     if request.method == 'POST':
-        if request.form['action'] == 'reset' :
-            data = request.form
-            print(data)
-        elif request.form['action'] == 'next' :
-            data = request.form
-            print(data)
+        data = request.form.to_dict()
+        if validate_request_id(data) == False :
+            flash("Neplatné odeslání formuláře", category='error')
+        elif validate_form(data) == False :
+            flash("Špatně vyplněný formulář", category='error')
+        else :
+            flash("Atributy uloženy", category='success')
 
-    current_image = Object.query.order_by(func.random()).first()
+        if data['action'] == 'next' :
+            new_image = Object.query.order_by(func.random()).first()
+        else:
+            new_image = Object.query.filter_by(id=data['imageID']).first()
 
-    image_ID=current_image.id
-    return render_template('form.html', current_image=current_image.filename, image_ID=image_ID)
+    if request.method == 'GET':
+        new_image = Object.query.order_by(func.random()).first()
+
+    request_id=new_request(new_image.id)
+    return render_template('form.html', current_image=new_image.filename, image_ID=new_image.id, request_ID=request_id)
 
