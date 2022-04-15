@@ -25,6 +25,16 @@ from models import Image, Http_request, Answer
 if __name__ == "__main__":
     app.run(debug=True)
 
+def delete_requests():
+    with app.app_context():
+        db.session.execute("delete from http_request where timestamp < now() - interval '30 minutes'")
+        db.session.commit()
+        print("Deleting old requests")
+# Automatické mazání starých requests
+scheduler = BackgroundScheduler()
+job = scheduler.add_job(delete_requests, 'interval', minutes=15)
+scheduler.start()
+
 def validate_form(data):
     if data['action'] == '' or data['imageID'] == '' or data['requestID'] == '' :
         return False
@@ -44,16 +54,6 @@ def validate_request_id(data):
         sem.release()
         return True
 
-def delete_requests():
-    with app.app_context():
-        db.session.execute("delete from http_request where timestamp < now() - interval '30 minutes'")
-        db.session.commit()
-        print("Deleting old requests")
-# Automatické mazání starých requests
-scheduler = BackgroundScheduler()
-job = scheduler.add_job(delete_requests, 'interval', minutes=15)
-scheduler.start()
-
 def new_request(new_image):
     request_id=uuid.uuid4()
     new_http_request = Http_request(request_id=request_id, image_id=new_image)
@@ -67,8 +67,8 @@ def save_answer(data):
     for value in data_attributes:
         if len(value[1].strip()) != 0 :
             attributes.append(value[1].strip())
-    print(attributes)
     answer = Answer(image_id=data['imageID'], attributes=attributes, ip=request.remote_addr)
+    print(request.access_route)
     db.session.add(answer)
     db.session.commit()
 
