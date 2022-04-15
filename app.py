@@ -67,8 +67,7 @@ def save_answer(data):
     for value in data_attributes:
         if len(value[1].strip()) != 0 :
             attributes.append(value[1].strip())
-    answer = Answer(image_id=data['imageID'], attributes=attributes, ip=request.remote_addr)
-    print(request.access_route)
+    answer = Answer(image_id=data['imageID'], attributes=attributes, ip=request.access_route[0])
     db.session.add(answer)
     db.session.commit()
 
