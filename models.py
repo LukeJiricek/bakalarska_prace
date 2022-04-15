@@ -1,15 +1,23 @@
+from sqlalchemy import ForeignKey
 from app import db
 from sqlalchemy.schema import FetchedValue
 
-class Object(db.Model):
+class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     filename = db.Column(db.String(50), unique=True)
     type = db.Column(db.String(20))
     source = db.Column(db.String(250))
     title = db.Column(db.String(100))
     author = db.Column(db.String(50))
+    answer = db.relationship("Answer")
 
-class http_request(db.Model):
+class Http_request(db.Model):
     request_id = db.Column(db.String(50), primary_key=True, unique=True)
-    image_id = db.Column(db.Integer, primary_key=True)
+    image_id = db.Column(db.Integer)
     timestamp = db.Column(db.String(100), server_default=FetchedValue())
+
+class Answer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_id = db.Column(db.Integer, db.ForeignKey('image.id'))
+    attributes = db.Column(db.ARRAY(db.String))
+    ip = db.Column(db.String(45))
