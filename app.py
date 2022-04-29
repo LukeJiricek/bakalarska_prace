@@ -96,6 +96,7 @@ def form():
     if request.method == 'GET':
         new_image = Image.query.order_by(func.random()).first()
 
+
     request_id=new_request(new_image.id)
-    return render_template('form.html', current_image=new_image.filename, image_ID=new_image.id, request_ID=request_id)
+    return render_template('form.html', current_image=new_image.filename, image_ID=new_image.id, request_ID=request_id, author=new_image.author, title=new_image.title, link=new_image.source)
 

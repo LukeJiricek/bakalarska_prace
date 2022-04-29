@@ -21,3 +21,4 @@ class Answer(db.Model):
     image_id = db.Column(db.Integer, db.ForeignKey('image.id'))
     attributes = db.Column(db.ARRAY(db.String))
     ip = db.Column(db.String(45))
+    timestamp = db.Column(db.String(100), server_default=FetchedValue())

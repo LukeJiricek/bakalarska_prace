@@ -9,49 +9,63 @@
     </head>
 
     <body>
-        <header>
-            <h1>Obrázkový dataset s atributy</h1>
-            <div id="nav-left"></div>
-            <nav>
-                <ul>
-                    <li class="nav-item">
-                        <a href="/">O projektu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/form">Dotazník</a>
-                    </li>
+        <div class="content">
+            <header>
+                <div id="header-background">
+                    <h1>Obrázkový dataset s atributy</h1>
+                </div>
+                <div id="nav-left"></div>
+                <nav>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="/">O projektu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/form">Dotazník</a>
+                        </li>
 
-                </ul>
-            </nav>
-            <div id="nav-right"></div>
-        </header>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    {% if category == 'error' %}
-                        <div class="alert alert-danger alert alter-dismissible fade show" role="alert">
-                            {{ message }}
-                            <button type="button" class="close" data-dismiss="alert">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    {% else %}
-                        <div class="alert alert-success alert alter-dismissible fade show" role="alert">
-                            {{ message }}
-                            <button type="button" class="close" data-dismiss="alert">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+                    </ul>
+                </nav>
+                <div id="nav-right"></div>
+            </header>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == 'error' %}
+                            <div class="alert alert-danger alert alter-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-success alert alter-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
 
-        <main>
-            <section>{% block section %}{% endblock %}</section>
-        </main>
+            <main>
+                <section>{% block section %}{% endblock %}</section>
+            </main>
+        </div>
         <footer>
-
+            <section class="footer-grid">
+                <article>
+                    <h4>Lukáš Jiříček</h4>
+                </article>
+                <article>
+                    <h4>lukas.jiricek01@upol.cz</h4>
+                </article>
+                <article>
+                    <h4>2022</h4>
+                </article>
+            </section>
 
         </footer>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
