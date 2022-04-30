@@ -15,6 +15,7 @@ class Http_request(db.Model):
     request_id = db.Column(db.String(50), primary_key=True, unique=True)
     image_id = db.Column(db.Integer)
     timestamp = db.Column(db.String(100), server_default=FetchedValue())
+    attributes = db.Column(db.ARRAY(db.String))
 
 class Answer(db.Model):
     id = db.Column(db.Integer, primary_key=True)

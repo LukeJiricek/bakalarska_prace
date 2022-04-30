@@ -50,7 +50,7 @@ h4 {
 
 #header-background {
     grid-column: 1 / 4;
-    background-image: linear-gradient(to right bottom, #f1faee, #e4f4e7, #d7efe2, #c8e9df, #bae3dd, #a9d8d7, #9acdd1, #8bc2cc, #77b0c0, #649eb5, #538da9, #457b9d);
+    background-image: linear-gradient(150deg, #f1faee, #e4f4e7, #d7efe2, #c8e9df, #bae3dd, #a9d8d7, #9acdd1, #8bc2cc, #77b0c0, #649eb5, #538da9, #457b9d);
 }
 
 header h1 {
@@ -129,6 +129,7 @@ h3 {
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    align-items: start;
 }
 
 .grid-content-3fr-1fr {
@@ -187,16 +188,28 @@ h3 {
     transition: opacity .15s linear;
 }
 
-#attribute-form button {
+button {
     background-color: rgb(230, 57, 70);
     border: none;
     color: white;
     text-align: center;
     font-size: 1em;
+    border-radius: 10px;
 }
 
-#attribute-form button:hover {
+button:hover {
     background-color: #CA1421;
+}
+
+button:disabled,
+button[disabled]{
+    background-color: gray;
+}
+
+.article-grid-button {
+    float: right;
+    padding: 5px 10px;
+    pointer-events: none;
 }
 
 #attribute-form input {
