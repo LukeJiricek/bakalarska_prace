@@ -29,6 +29,7 @@ footer {
     background-color: #1D3557;
     flex-shrink: 0;
     border-top: 3px solid rgb(230, 57, 70);
+    padding: 16px;
 }
 
 .footer-grid {
@@ -303,7 +304,7 @@ button.close {
 }
 
 @media only screen and (max-width: 50em) {
-    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid #image-grid{
+    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid, #image-grid{
         grid-template-columns: 1fr;
     }
 
