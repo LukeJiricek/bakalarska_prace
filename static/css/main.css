@@ -89,6 +89,7 @@ ul {
 
 .nav-item {
     height: 4rem;
+    transition: 0.2s;
 }
 
 .nav-item:hover {
@@ -198,6 +199,7 @@ button {
     text-align: center;
     font-size: 1em;
     border-radius: 10px;
+    transition: 0.2s;
 }
 
 button:hover {
@@ -207,12 +209,12 @@ button:hover {
 button:disabled,
 button[disabled]{
     background-color: gray;
+    pointer-events: none;
 }
 
 .article-grid-button {
     float: right;
     padding: 5px 10px;
-    pointer-events: none;
 }
 
 #attribute-form input {
