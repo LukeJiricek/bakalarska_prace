@@ -51,7 +51,7 @@ h4 {
 
 #header-background {
     grid-column: 1 / 4;
-    background-image: linear-gradient(150deg, #f1faee, #e4f4e7, #d7efe2, #c8e9df, #bae3dd, #a9d8d7, #9acdd1, #8bc2cc, #77b0c0, #649eb5, #538da9, #457b9d);
+    background-image: linear-gradient(165deg, #f1faee, #e4f4e7, #d7efe2, #c8e9df, #bae3dd, #a9d8d7, #9acdd1, #8bc2cc, #77b0c0, #649eb5, #538da9, #457b9d);
 }
 
 header h1 {
@@ -170,8 +170,7 @@ h3 {
 }
 
 #image {
-    max-width: 532px;
-    max-height: 600px;
+    max-width: 580px;
     padding: 1.5rem;
     width: 100%;
     box-sizing: border-box;
