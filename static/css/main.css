@@ -139,13 +139,6 @@ h3 {
     grid-template-columns: 3fr 1fr;
 }
 
-#image-grid {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    align-items: start;
-}
-
 #image_source {
     margin: 0px;
     color: #c4c4c4;
@@ -293,9 +286,6 @@ button.close {
     .grid, header, footer, main, #header-background{
         grid-template-columns: 2vw 1fr 2vw;
     }
-    #image-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media only screen and (max-width: 57em) {
@@ -305,13 +295,17 @@ button.close {
     nav {
         grid-column: 1 / 4;
     }
-    .grid-content-3fr-1fr {
+    .grid-content-3fr-1fr, #image-grid {
         grid-template-columns: 1fr;
+    }
+
+    #image-article {
+        grid-row:2;
     }
 }
 
 @media only screen and (max-width: 50em) {
-    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid, #image-grid{
+    nav ul, .grid-content-2x1fr, .grid-content-3x1fr, .footer-grid{
         grid-template-columns: 1fr;
     }
 
