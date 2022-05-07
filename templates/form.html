@@ -18,21 +18,20 @@
                     <b>Co to je atribut?</b> Jako atribut objektu bereme jakoukoli vlastnost, z pravidla deskriptivní přídavné jméno, kterým můžeme objekt popsat. 
                     Může se jednat o objektivní vlastnost (například barva, tvar, velikost, materiál...) nebo více subjektivní dojem (například moderní, industriální, škaredý, krásný...).
                 </p>
-            
-                <h4>
-                    Atribut dokončuje větu: <i>„Objekt je _________.“</i>
-                </h4>
+                <p>
+                    Atribut dokončuje věty: <b><i>„Objekt je _________.“</i></b> nebo <b><i>„_________ objekt.“</i></b>
+                </p>
             </section>
         </article>
         <form method="POST" id="attribute-form" class="article-grid highlight">
-            <input autocomplete="off" type="text" name="atribut-1"/>
-            <input autocomplete="off" type="text" name="atribut-2"/>
-            <input autocomplete="off" type="text" name="atribut-3"/>
-            <input autocomplete="off" type="text" name="atribut-4"/>
-            <input autocomplete="off" type="text" name="atribut-5"/>
-            <input autocomplete="off" type="text" name="atribut-6"/>
-            <button id="reset" type="submit" name="action" value="reset" onclick="post_request()">Více atributů</button>
-            <button id="next" type="submit" name="action" value="next" onclick="post_request()">Další obrázek</button>
+            <input placeholder="Atribut" autocomplete="off" type="text" name="atribut-1"/>
+            <input placeholder="Atribut" autocomplete="off" type="text" name="atribut-2"/>
+            <input placeholder="Atribut" autocomplete="off" type="text" name="atribut-3"/>
+            <input placeholder="Atribut" autocomplete="off" type="text" name="atribut-4"/>
+            <input placeholder="Atribut" autocomplete="off" type="text" name="atribut-5"/>
+            <input placeholder="Atribut" autocomplete="off" type="text" name="atribut-6"/>
+            <button id="reset" type="submit" name="action" value="reset" onclick="post_request()">Stejný objekt</button>
+            <button id="next" type="submit" name="action" value="next" onclick="post_request()">Nový objekt</button>
             <input type="hidden" name="imageID" value="{{ image_ID }}">
             <input type="hidden" name="requestID" value="{{ request_ID }}">
         </form>

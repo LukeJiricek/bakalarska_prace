@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block section %}
+    <h2>Dotazník</h2>
+    <div id="image-grid" class="grid-content-2x1fr">
+        <article id="image-article">
+            <img id="image" class="highlight-image" src="{{ current_image }}">
+            <p id="image_source">
+                    {{ title }}, {{ author }}, licensed under Creative Commons
+            </p>
+        </article>
+        <article class="article-grid highlight">
+            <h3>Jak dotazník vyplňovat a co to je atribut</h3>
+            <section class="accordion">
+                <p>
+                V dotazníku se nachází objekt na obrázku. Váš úkol je se zamyslet a popsat zobrazený objekt pomocí co nejvíce vlastností, neboli atributů.
+                </p>
+                <p>
+                    <b>Co to je atribut?</b> Jako atribut objektu bereme jakoukoli vlastnost, z pravidla deskriptivní přídavné jméno, kterým můžeme objekt popsat. 
+                    Může se jednat o objektivní vlastnost (například barva, tvar, velikost, materiál...) nebo více subjektivní dojem (například moderní, industriální, škaredý, krásný...).
+                </p>
+            
+                <h4>
+                    Atribut dokončuje větu: <i>„Objekt je _________.“</i>
+                </h4>
+            </section>
+        </article>
+        <form method="POST" id="attribute-form" class="article-grid highlight">
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[0] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-0" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-0" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[1] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-1" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-1" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[2] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-2" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-2" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[3] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-3" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-3" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[4] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-4" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-4" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[5] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-5" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-5" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[6] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-6" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-6" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[7] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-7" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-7" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[8] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-8" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-8" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="attribute-toggle">
+                <h4 class="attribute-toggle-title">{{ attributes[9] }}</h4>
+                <div class="tw-toggle">
+                    <input type="radio" name="toggle-9" value="false">
+                    <label class="toggle toggle-no"><i class="fa fa-times fa-lg"></i></label>
+                    <input type="radio" name="toggle-9" value="true">
+                    <label class="toggle toggle-yes"><i class="fa fa-check fa-lg"></i></label>
+                    <span></span>
+                </div>
+            </div>
+            <button id="reset" type="submit" onclick="post_request()">Odeslat</button>
+            <input type="hidden" name="imageID" value="{{ image_ID }}">
+            <input type="hidden" name="requestID" value="{{ request_ID }}">
+        </form>
+        <script>
+            function post_request() {
+                document.getElementById("attribute-form").style.pointerEvents = "none";
+                document.getElementById("attribute-form").style.opacity = "0.5";
+            }
+        </script>
+    <div>
+{% endblock %}

@@ -143,6 +143,8 @@ h3 {
     margin: 0px;
     color: #c4c4c4;
     font-size: smaller;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .article-grid {
@@ -190,7 +192,7 @@ button {
     color: white;
     text-align: center;
     font-size: 1em;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: 0.2s;
 }
 
@@ -210,9 +212,13 @@ button[disabled]{
 }
 
 #attribute-form input {
-   text-align: center;
    border: none;
    font-size: 1em;
+   padding-left: 10px;
+}
+
+::placeholder {
+    color: #c4c4c4;
 }
 
 #attribute-form > *{
@@ -318,4 +324,88 @@ button.close {
     #attribute-form {
         grid-template-columns: 1fr;
     }
+}
+
+/* TOGGLE */
+
+.tw-toggle {
+    display: inline-block;
+    padding: 2px 3px;
+    border-radius: 20px;
+    width: 54px;
+    position:relative;
+    border: 2px solid #95A5A6;
+    background-color: white;
+}
+
+.tw-toggle label {
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    color: #95A5A6;
+    position:relative;
+    z-index:2;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.toggle-no {
+    padding-left: 4px;
+}
+
+.toggle-yes {
+    padding: 4px 2px 0px 5px;
+}
+
+.tw-toggle input {
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    margin: 2px;
+}
+
+.tw-toggle span {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background:#fff;
+    display:block;
+    position:absolute;
+    left: 22px;
+    top: 2px;
+    transition:all 0.3s ease-in-out;
+}
+
+.tw-toggle input[value="false"]:checked ~ span{
+    background:#e74c3c;
+    left:2px;
+    color:#fff;
+}
+
+.tw-toggle input[value="true"]:checked ~ span{
+    background:#27ae60;
+    left: 30px;
+}
+
+.tw-toggle input[value="false"]:checked + label,.tw-toggle input[value="true"]:checked + label{
+    color:#fff;
+}
+
+/* TOGGLE - END */
+
+.attribute-toggle {
+    display:flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #f1faee;
+}
+
+.attribute-toggle-title {
+    border-radius: 20px;
+    padding: 6px 10px;
+    width: 150px;
 }

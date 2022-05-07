@@ -23,3 +23,16 @@ class Answer(db.Model):
     attributes = db.Column(db.ARRAY(db.String))
     ip = db.Column(db.String(45))
     timestamp = db.Column(db.String(100), server_default=FetchedValue())
+
+class Answer2(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_id = db.Column(db.Integer, db.ForeignKey('image.id'))
+    attributes_true = db.Column(db.ARRAY(db.String))
+    attributes_false = db.Column(db.ARRAY(db.String))
+    ip = db.Column(db.String(45))
+    timestamp = db.Column(db.String(100), server_default=FetchedValue())
+
+class Attribute(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    type = db.Column(db.String(50))
