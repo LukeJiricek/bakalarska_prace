@@ -194,6 +194,8 @@ button {
     font-size: 1em;
     border-radius: 20px;
     transition: 0.2s;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
@@ -372,7 +374,6 @@ button.close {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background:#fff;
     display:block;
     position:absolute;
     left: 22px;
