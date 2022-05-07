@@ -195,7 +195,6 @@ button {
     border-radius: 20px;
     transition: 0.2s;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
@@ -368,6 +367,7 @@ button.close {
     height: 24px;
     width: 24px;
     margin: 2px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .tw-toggle span {
