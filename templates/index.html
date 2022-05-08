@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 {% block section %}
-                    <h2>O Projektu</h2>
-                    <p class="main-text">
-                        Tato webová aplikace je součástí bakalářské práce zabývající se vytvořením datasetu obrázků a atributů za pomoci sběru a zpracování dat od uživatelů. Dataset se v současnosti nachází ve fázi přípravy podkladů a velmi důležitá část této fáze je sběr dat. Dotazník můžete vyplňovat neomezeně a každý vyplněný dotazník je velkým přínosem. 
-                    </p>
-                    <div class="grid-content-2x1fr">
-                        <article class="article-grid highlight-image">
-                            <h3>Současný dotazník</h3>
-                            <p>
-                                Cílem současného dotazníku je průzkum, sběr a vytvoření databáze atributů (vlastností), jako příprava na finální sběr dat a zautomatizování zpracování celého procesu.
-                            </p>
-                            <a href="/form"><button type="button" class="article-grid-button">Dotazník</button></a>
-                        </article>
-                        <article class="article-grid highlight">
-                            <h3>Data</h3>
-                            <p>
-                                Po zahájení finálního sběru dat bude konečný dataset a všechny jeho data veřejně dostupná a ke stažení.
-                            </p>
-                            <a href="/download"><button type="button" class="article-grid-button" disabled>Stažení dat</button></a>
-                        </article>
-                    </div>
+    <article class="main-text highlight">
+        <h3>O Projektu</h3>
+        <p>
+            Tato webová aplikace je součástí bakalářské práce zabývající se vytvořením datasetu obrázků a atributů za pomoci sběru a zpracování dat od uživatelů. Dataset se v současnosti nachází ve fázi přípravy podkladů a velmi důležitá část této fáze je sběr dat. Dotazník můžete vyplňovat neomezeně a každý vyplněný dotazník je velkým přínosem. 
+        </p>
+    </article>
+    <div class="grid-content-2x1fr">
+        <article class="article-grid highlight">
+            <h3>Současný dotazník</h3>
+            <p>
+                Cílem současného dotazníku je průzkum, sběr a vytvoření databáze atributů (vlastností), jako příprava na finální sběr dat a zautomatizování zpracování celého procesu.
+            </p>
+            <a href="/form"><button type="button" class="article-grid-button">Dotazník</button></a>
+        </article>
+        <article class="article-grid highlight">
+            <h3>Data</h3>
+            <p>
+                Po zahájení finálního sběru dat bude konečný dataset a všechny jeho data veřejně dostupná a ke stažení.
+            </p>
+            <a href="/download"><button type="button" class="article-grid-button" disabled>Stažení dat</button></a>
+        </article>
+    </div>
 {% endblock %}

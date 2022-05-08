@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 {% block section %}
-    <h2>Dotazník</h2>
-    <div id="image-grid" class="grid-content-2x1fr">
+    <div id="image-grid" class="grid-content-2xfr">
         <article id="image-article">
-            <img id="image" class="highlight-image" src="{{ current_image }}">
+            <img id="image" class="highlight" src="{{ current_image }}">
             <p id="image_source">
                     {{ title }}, {{ author }}, licensed under Creative Commons
             </p>
@@ -18,9 +17,9 @@
                     <b>Co to je atribut?</b> Jako atribut objektu bereme jakoukoli vlastnost, z pravidla deskriptivní přídavné jméno, kterým můžeme objekt popsat. 
                     Může se jednat o objektivní vlastnost (například barva, tvar, velikost, materiál...) nebo více subjektivní dojem (například moderní, industriální, škaredý, krásný...).
                 </p>
-                <h4>
-                    Atribut dokončuje větu: <i>„Objekt je _________.“</i>
-                </h4>
+                <p>
+                    Atribut dokončuje věty: <b><i>„Objekt je ________.“</i></b> nebo <b><i>„_______ objekt.“</i></b>
+                </p>
             </section>
         </article>
         <form method="POST" id="attribute-form" class="article-grid highlight">
