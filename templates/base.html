@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../static/css/main.css">
     </head>
 
-    <body onload="nav_border()">
+    <body>
         <div class="content">
             <header>
                 <div id="header-content">
@@ -69,11 +69,11 @@
             function delete_flash(flash) {
                 document.getElementsByClassName("alert")[0].remove();
             }
-            function nav_border() {
+            document.addEventListener("DOMContentLoaded", function(){
                 var url = new URL(window.location.href).pathname
                 document.getElementById(url).style.borderBottom = "solid 2px white";
                 document.getElementById(url).style.textShadow = "none";
-            }
+            });
         </script>
     </body>
 </html>
