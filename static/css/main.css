@@ -36,7 +36,7 @@ footer {
     color: white;
     padding: 1.5rem;
     gap: 1.5rem;
-    text-shadow: 2px 3px 0px #898989;
+    text-shadow: 1px 1px 0px #898989;
 }
 
 h1 {
@@ -132,6 +132,7 @@ main section {
     font-size: smaller;
     padding-left: 12px;
     padding-right: 12px;
+    font-size: 10px;
 }
 
 .article-grid {
