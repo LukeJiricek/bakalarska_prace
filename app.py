@@ -62,6 +62,20 @@ def new_request(new_image):
     db.session.commit()
     return request_id
 
+def get_image():
+    id_list = []
+    images = Image.query.order_by(func.random())
+    for image in images:
+        id_list.append(image.id)
+    id_dict = dict.fromkeys(id_list,0)
+
+    answers = Answer.query.all()
+    for answer in answers:
+        id_dict[answer.image_id] += 1
+    id_list_sorted= sorted(id_dict.items(), key=lambda item: item[1])
+    id_list_filtered = filter(lambda item: item[1] == id_list_sorted[0][1], id_list_sorted)
+    return Image.query.filter_by(id=random.choice(list(id_list_filtered))[0]).first()
+
 def save_answer(data):
     data_attributes = list(data.items())[:6]
     attributes = []
@@ -164,12 +178,12 @@ def form():
             flash("Atributy uloženy", category='success')
 
         if data['action'] == 'next' :
-            new_image = Image.query.order_by(func.random()).first()
+            new_image = get_image()
         else:
             new_image = Image.query.filter_by(id=data['imageID']).first()
 
     if request.method == 'GET':
-        new_image = Image.query.order_by(func.random()).first()
+        new_image = get_image()
 
 
     request_id=new_request(new_image.id)
