@@ -219,7 +219,7 @@ button[disabled]{
     background-image: none;
     background-color: #898989;
     color: white;
-    box-shadow: inset rgb(0 0 0 / 30%) 0px 0px 4px 0px;
+    box-shadow: inset rgb(0 0 0 / 35%) 0px 0px 6px 0px;
 }
 
 
