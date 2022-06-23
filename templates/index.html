@@ -19,7 +19,7 @@
             <p>
                 Po zahájení finálního sběru dat bude konečný dataset a všechny jeho data veřejně dostupná a ke stažení.
             </p>
-            <a href="/download"><button type="button" class="article-grid-button" disabled>Stažení dat</button></a>
+            <a href="{{ url_for('.download_file') }}"><button type="button" class="article-grid-button">Stažení dat</button></a>
         </article>
     </div>
 {% endblock %}

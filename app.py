@@ -1,8 +1,9 @@
-from flask import Flask,render_template, request, flash, jsonify
+from flask import Flask,render_template, request, flash, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import false, null
 from sqlalchemy.sql.expression import func, select
 from apscheduler.schedulers.background import BackgroundScheduler
+from zipfile import ZipFile
 import os, re, uuid, threading, time, random, json, unidecode, copy, csv
 
 db = SQLAlchemy()
@@ -225,30 +226,42 @@ def generate_objects_min_list(diacritic = False):
 def generate_json():
     objects_list = generate_objects_list()
     objects_json = json.dumps(objects_list, ensure_ascii=False, indent=4)
-    with open('dataset.json', 'w') as outfile:
+    with open('download/dataset.json', 'w') as outfile:
         outfile.write(objects_json)
 
 def generate_min_json():
     objects_min_list = generate_objects_min_list()
     min_objects_json = json.dumps(objects_min_list, ensure_ascii=False, indent=4)
-    with open('dataset-minimal.json', 'w') as outfile:
+    with open('download/dataset-minimal.json', 'w') as outfile:
         outfile.write(min_objects_json)
 
 def generate_min_csv():
     min_csv_list = generate_objects_min_list(True)
     keys =  min_csv_list[0].keys()
-    with open('dataset-minimal.csv', 'w', newline='') as output_file:
+    with open('download/dataset-minimal.csv', 'w', newline='') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(min_csv_list)
 
-
-@app.route("/")
-def index():
+def generate_zip():
     generate_json()
     generate_min_json()
     generate_min_csv()
+    zipObj = ZipFile('download/dataset.zip', 'w')
+    zipObj.write('download/dataset-minimal.csv', 'dataset-minimal.csv')
+    zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
+    zipObj.write('download/dataset.json', 'dataset.json')
+    zipObj.close()
+    return 'dataset.zip'
+
+@app.route("/")
+def index():
     return render_template('index.html')
+
+@app.route('/download')
+def download_file():
+    path = generate_zip()
+    return send_from_directory('download/', path, as_attachment=True)
 
 @app.route("/form", methods=['GET', 'POST'])
 def form():
