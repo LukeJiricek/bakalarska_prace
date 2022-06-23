@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import false, null
 from sqlalchemy.sql.expression import func, select
 from apscheduler.schedulers.background import BackgroundScheduler
-import os, re, uuid, threading, time, random
+import os, re, uuid, threading, time, random, json, unidecode, copy, csv
 
 db = SQLAlchemy()
 sem = threading.Semaphore()
@@ -25,7 +25,7 @@ from models import Image, Http_request, Answer, Answer2, Attribute
 if __name__ == "__main__":
     app.run(debug=True)
 
-# Funkce na automatické mazání starých http_request
+# Funkce na automatické mazání prošlých http_request
 def delete_requests():
     with app.app_context():
         db.session.execute("delete from http_request where timestamp < now() - interval '30 minutes'")
@@ -161,8 +161,93 @@ def save_answer_2(attributes, values, id):
     db.session.add(answer)
     db.session.commit()
 
+# JSON / CSV
+def generate_objects_list(diacritic = False):
+    attributes_list = []
+    attributes = Attribute.query.all()
+    for attribute in attributes:
+        if diacritic == False:
+            attributes_list.append(unidecode.unidecode(attribute.name))
+        else:
+            attributes_list.append(attribute.name)
+
+    attributes_dict = {new_dict: {'Value':0,True:0,False:0} for new_dict in attributes_list}
+
+    objects_list = []
+    images = Image.query.all()
+    for image in images:
+        img_dict = image.__dict__
+        img_dict.pop('_sa_instance_state')
+        img_dict['filename'] = img_dict['filename'].replace("..", "https://obrazkovy-dataset.herokuapp.com")
+        # img_dict['filename'] = img_dict['filename'].replace("..", request.url_root) DYNAMIC URL
+        img_dict['filename'] = img_dict['filename'].replace(" ", "%20")
+        img_dict["attributes"] = copy.deepcopy(attributes_dict)
+        objects_list.append(img_dict)
+
+    answers = Answer2.query.all()
+
+    for answer in answers:
+        true_answers = answer.attributes_true
+        false_answers = answer.attributes_false
+
+        for true_answer in true_answers:
+            updated_object = next(item for item in objects_list if item['id'] == answer.image_id)
+            if diacritic == False:
+                updated_object['attributes'][unidecode.unidecode(true_answer)][True] += 1
+                updated_object['attributes'][unidecode.unidecode(true_answer)]['Value'] = round(updated_object['attributes'][unidecode.unidecode(true_answer)][True] / (updated_object['attributes'][unidecode.unidecode(true_answer)][True] + updated_object['attributes'][unidecode.unidecode(true_answer)][False]), 2)
+            else:
+                updated_object['attributes'][true_answer][True] += 1
+                updated_object['attributes'][true_answer]['Value'] = round(updated_object['attributes'][true_answer][True] / (updated_object['attributes'][true_answer][True] + updated_object['attributes'][true_answer][False]), 2)
+
+        for false_answer in false_answers:
+            updated_object = next(item for item in objects_list if item['id'] == answer.image_id)
+            if diacritic == False:
+                updated_object['attributes'][unidecode.unidecode(false_answer)][False] += 1
+                updated_object['attributes'][unidecode.unidecode(false_answer)]['Value'] = round(updated_object['attributes'][unidecode.unidecode(false_answer)][True] / (updated_object['attributes'][unidecode.unidecode(false_answer)][True] + updated_object['attributes'][unidecode.unidecode(false_answer)][False]), 2)
+            else:
+                updated_object['attributes'][false_answer][False] += 1
+                updated_object['attributes'][false_answer]['Value'] = round(updated_object['attributes'][false_answer][True] / (updated_object['attributes'][false_answer][True] + updated_object['attributes'][false_answer][False]), 2)
+
+    return objects_list
+
+def generate_objects_min_list(diacritic = False):
+    objects_list = generate_objects_list(diacritic)
+    objects_min_list = []
+    for object in objects_list:
+        new_min_object = {}
+        new_min_object['id'] = object['id']
+        new_min_object['Object'] = object['filename']
+        for key in object['attributes']:
+            new_min_object[key] = object['attributes'][key]['Value']
+        objects_min_list.append(new_min_object)
+    return objects_min_list
+
+def generate_json():
+    objects_list = generate_objects_list()
+    objects_json = json.dumps(objects_list, ensure_ascii=False, indent=4)
+    with open('dataset.json', 'w') as outfile:
+        outfile.write(objects_json)
+
+def generate_min_json():
+    objects_min_list = generate_objects_min_list()
+    min_objects_json = json.dumps(objects_min_list, ensure_ascii=False, indent=4)
+    with open('dataset-minimal.json', 'w') as outfile:
+        outfile.write(min_objects_json)
+
+def generate_min_csv():
+    min_csv_list = generate_objects_min_list(True)
+    keys =  min_csv_list[0].keys()
+    with open('dataset-minimal.csv', 'w', newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(min_csv_list)
+
+
 @app.route("/")
 def index():
+    generate_json()
+    generate_min_json()
+    generate_min_csv()
     return render_template('index.html')
 
 @app.route("/form", methods=['GET', 'POST'])
