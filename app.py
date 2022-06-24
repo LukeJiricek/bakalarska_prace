@@ -4,7 +4,7 @@ from sqlalchemy import false, null
 from sqlalchemy.sql.expression import func, select
 from apscheduler.schedulers.background import BackgroundScheduler
 from zipfile import ZipFile
-import os, re, uuid, threading, time, random, json, unidecode, copy, csv
+import os, re, uuid, threading, time, random, json, unidecode, copy, csv, shutil
 
 db = SQLAlchemy()
 sem = threading.Semaphore()
@@ -102,9 +102,9 @@ def validate_request_id_2(data):
         return attributes
 
 def validate_form_2(data):
-    if len(data) != 12:
+    if len(data) != 14:
         return False
-    for x in data[0:10]:
+    for x in data[0:12]:
         if x != 'false' and x != 'true':
             return False
     return True
@@ -138,7 +138,7 @@ def get_attributes_2(id):
             attribute_dict[attributeF] += 1
 
     attribute_list_sorted= sorted(attribute_dict.items(), key=lambda item: item[1])
-    attribute_list_final = [attribute[0] for attribute in attribute_list_sorted[:10]]
+    attribute_list_final = [attribute[0] for attribute in attribute_list_sorted[:12]]
 
     return attribute_list_final
 
@@ -162,7 +162,7 @@ def save_answer_2(attributes, values, id):
     db.session.add(answer)
     db.session.commit()
 
-# JSON / CSV
+# JSON / CSV / ZIP
 def generate_objects_list(diacritic = False):
     attributes_list = []
     attributes = Attribute.query.all()
@@ -217,7 +217,7 @@ def generate_objects_min_list(diacritic = False):
     for object in objects_list:
         new_min_object = {}
         new_min_object['id'] = object['id']
-        new_min_object['Object'] = object['filename']
+        new_min_object['Objekt'] = object['filename']
         for key in object['attributes']:
             new_min_object[key] = object['attributes'][key]['Value']
         objects_min_list.append(new_min_object)
@@ -228,40 +228,89 @@ def generate_json():
     objects_json = json.dumps(objects_list, ensure_ascii=False, indent=4)
     with open('download/dataset.json', 'w') as outfile:
         outfile.write(objects_json)
+    zipObj = ZipFile('download/dataset-json.zip', 'w')
+    zipObj.write('download/readme.txt', 'readme.txt')
+    zipObj.write('download/dataset.json', 'dataset.json')
+    zipObj.close()
+    return 'dataset.json'
 
 def generate_min_json():
     objects_min_list = generate_objects_min_list()
     min_objects_json = json.dumps(objects_min_list, ensure_ascii=False, indent=4)
     with open('download/dataset-minimal.json', 'w') as outfile:
         outfile.write(min_objects_json)
+    zipObj = ZipFile('download/dataset-min-json.zip', 'w')
+    zipObj.write('download/readme.txt', 'readme.txt')
+    zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
+    zipObj.close()
+    return 'dataset-minimal.json'
 
-def generate_min_csv():
+def generate_csv():
     min_csv_list = generate_objects_min_list(True)
     keys =  min_csv_list[0].keys()
-    with open('download/dataset-minimal.csv', 'w', newline='') as output_file:
+    with open('download/dataset.csv', 'w', newline='') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(min_csv_list)
+    zipObj = ZipFile('download/dataset-csv.zip', 'w')
+    zipObj.write('download/readme.txt', 'readme.txt')
+    zipObj.write('download/dataset.csv', 'dataset.csv')
+    zipObj.close()
+    return 'dataset.csv'
+
+def generate_picture_zip():
+    shutil.make_archive('download/img', 'zip', 'static/', 'img')
+    return 'img.zip'
 
 def generate_zip():
-    generate_json()
-    generate_min_json()
-    generate_min_csv()
-    zipObj = ZipFile('download/dataset.zip', 'w')
-    zipObj.write('download/dataset-minimal.csv', 'dataset-minimal.csv')
-    zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
-    zipObj.write('download/dataset.json', 'dataset.json')
-    zipObj.close()
-    return 'dataset.zip'
+    with app.app_context():
+        generate_json()
+        generate_min_json()
+        generate_csv()
+        generate_picture_zip()
+        zipObj = ZipFile('download/dataset.zip', 'w')
+        zipObj.write('download/dataset.csv', 'dataset.csv')
+        zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
+        zipObj.write('download/dataset.json', 'dataset.json')
+        zipObj.write('download/img.zip', 'img.zip')
+        zipObj.write('download/readme.txt', 'readme.txt')
+        zipObj.close()
+        print("All data generated")
+        return 'dataset.zip'
 
+job = scheduler.add_job(generate_zip, 'interval', minutes=2)
+
+
+
+# DOWNLOAD PAGES
+@app.route('/download_full')
+def download_full():
+    return send_from_directory('download/', 'dataset.zip', as_attachment=True)
+
+@app.route('/download_pictures')
+def download_pictures():
+    return send_from_directory('download/', 'img.zip', as_attachment=True)
+
+@app.route('/download_json')
+def download_json():
+    return send_from_directory('download/', 'dataset-json.zip', as_attachment=True)
+
+@app.route('/download_min_json')
+def download_min_json():
+    return send_from_directory('download/', 'dataset-min-json.zip', as_attachment=True)
+
+@app.route('/download_csv')
+def download_csv():
+    return send_from_directory('download/', 'dataset-csv.zip', as_attachment=True)
+
+# MAIN PAGES
 @app.route("/")
 def index():
     return render_template('index.html')
 
-@app.route('/download')
-def download_file():
-    path = generate_zip()
-    return send_from_directory('download/', path, as_attachment=True)
+@app.route("/data")
+def data():
+    return render_template('data.html')
 
 @app.route("/form", methods=['GET', 'POST'])
 def form():
@@ -297,7 +346,7 @@ def form2():
         elif validate_form_2(list(data.values())) == False :
             flash("Špatně vyplněný formulář", category='error')
         else:
-            save_answer_2(attribute_list, list(data.values())[0:10], data['imageID'])
+            save_answer_2(attribute_list, list(data.values())[0:12], data['imageID'])
 
     new_image = get_image_2()
     new_request, attributes=new_request_2(new_image.id)

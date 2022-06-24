@@ -77,12 +77,12 @@ nav {
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     list-style: none;
     padding: 0;
     margin: 0;
     font-size:large;
-    grid-gap: 2.5rem;
+    grid-gap: 2rem;
     justify-items: center;
 }
 
@@ -140,6 +140,10 @@ main section {
 
 .article-grid {
     padding: 1.5rem;
+}
+
+.grid-row-2 {
+    grid-row: span 2;
 }
 
 .highlight {
@@ -204,6 +208,15 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
+.linear-gradient-2 {
+    background-image: linear-gradient(203deg, #6d327c, #5d4c97, #4563aa);
+}
+
+.linear-gradient-3 {
+    background-image: linear-gradient(45deg, #00a1bb, #00abb7, #00b2b1, #00b9a7);
+
+}
+
 button:hover {
     box-shadow: none;
 }
@@ -230,6 +243,7 @@ button[disabled]{
 .article-grid-button {
     float: right;
     padding: 5px 10px;
+    margin-left: 20px;
 }
 
 

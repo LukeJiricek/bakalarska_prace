@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 {% block section %}
     <article class="main-text highlight">
-        <h3>O Projektu</h3>
+        <h3>O projektu</h3>
         <p>
-            Tato webová aplikace je součástí bakalářské práce zabývající se vytvořením datasetu obrázků a atributů za pomoci sběru a zpracování dat od uživatelů. Dataset se v současnosti nachází ve fázi přípravy podkladů a velmi důležitá část této fáze je sběr dat. Dotazník můžete vyplňovat neomezeně a každý vyplněný dotazník je velkým přínosem. 
+            Tato webová aplikace je součástí bakalářské práce zabývající se vytvořením datasetu obrázků a atributů za pomoci sběru a zpracování dat od uživatelů. Dataset je zaměřený na okruh objektů <b>"Nábytek" </b> a s tím spojených atributů. Dataset se v současnosti v konečné fázi vytváření a zlepšování přesnosti datasetu. Nejdůležitější část této fáze je sběr dat. Dotazník můžete vyplňovat neomezeně a každý vyplněný dotazník je velkým přínosem. 
         </p>
     </article>
     <div class="grid-content-2x1fr">
         <article class="article-grid highlight">
             <h3>Současný dotazník</h3>
             <p>
-                Cílem současného dotazníku je průzkum, sběr a vytvoření databáze atributů (vlastností), jako příprava na finální sběr dat a zautomatizování zpracování celého procesu.
+                Cílem současného dotazníku je finální popsání objektů v datasetu. Tazateli je zobrazen vybraný seznam vlastností a objekt z dataset, jeho úkolem je vybrat, zda daná vlastnost náleži zobrazenému objektu.
             </p>
-            <a href="/form"><button type="button" class="article-grid-button">Dotazník</button></a>
+            <a href="/form2"><button type="button" class="article-grid-button">Dotazník</button></a>
         </article>
         <article class="article-grid highlight">
             <h3>Data</h3>
             <p>
-                Po zahájení finálního sběru dat bude konečný dataset a všechny jeho data veřejně dostupná a ke stažení.
+                Dataset je dostupný ke stažení v několika formátech. Popsání obsahu a jeho stažení je dostupné zde.
             </p>
-            <a href="{{ url_for('.download_file') }}"><button type="button" class="article-grid-button">Stažení dat</button></a>
+            <a href="/data"><button type="button" class="article-grid-button">Stažení dat</button></a>
         </article>
     </div>
 {% endblock %}

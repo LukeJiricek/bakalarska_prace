@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block section %}
+    <div class="grid-content-2x1fr">
+        <article class="article-grid highlight grid-row-2">
+            <h3>O datasetu</h3>
+            <p>
+                Dataset je zaměřený na okruh objektů z kategorie <b>"Nábytek</b>. Obsahuje 57 objektů a 90 atributů. Všechny obrázky objektů byly publikovány pod licencí Creative Commons, zdroje jsou uvedeny při stažení kompletního datasetu. Tazateli je ukázán objekt a 10 atributů. Jeho úkolem je vybrat, zda atribut popisuje objekt.
+            </p>
+            <a href="{{ url_for('.download_full') }}"><button type="button" class="linear-gradient-2 article-grid-button">Kompletní dataset</button></a>
+            <a href="{{ url_for('.download_pictures') }}"><button type="button" class="article-grid-button">Obrázky</button></a>
+        </article>
+        <article class="article-grid highlight">
+            <h3>JSON</h3>
+            <p>
+                Kompletní data obsahují všechny informace o objektech, zdroje a odpovědi z datasetu. Zjednodušená data obsahují objekt a finální data z odpovědí. Detailní popisy jsou součástí stažených souborů.
+            </p>
+            <a href="{{ url_for('.download_json') }}"><button type="button" class="linear-gradient-2 article-grid-button">Kompletní data</button></a>
+            <a href="{{ url_for('.download_min_json') }}"><button href="{{ url_for('.download_min_json') }}" type="button" class="article-grid-button">Zjednodušená data</button></a>
+        </article>
+        <article class="article-grid highlight">
+            <h3>CSV</h3>
+            <p>
+                Formát CSV je dostupný ve zjednodušené formě, vhodné pro tabulkové zobrazení, třídění a řazení. Detailní popis dat součástí staženého souboru.
+            </p>
+
+            <a href="{{ url_for('.download_csv') }}"><button href="{{ url_for('.download_csv') }}" type="button" class="linear-gradient-3 article-grid-button">Stáhnout CSV</button></a>
+
+        </article>
+    </div>
+{% endblock %}

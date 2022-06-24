@@ -3,8 +3,8 @@
         "id": 1,
         "source": "https://www.flickr.com/photos/83382396@N05/7980224537",
         "author": " MyBriefCase3000",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%201.jpg",
+        "type": "chair",
         "title": "Simple Chairs. $5",
         "attributes": {
             "Bily": {
@@ -382,11 +382,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -456,6 +451,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -463,8 +463,8 @@
         "id": 2,
         "source": "https://www.flickr.com/photos/11006205@N02/6215540354",
         "author": "rklopfer",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%202.jpg",
+        "type": "chair",
         "title": "Simple chair",
         "attributes": {
             "Bily": {
@@ -842,11 +842,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -916,6 +911,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -923,8 +923,8 @@
         "id": 3,
         "source": "https://www.flickr.com/photos/52634191@N08/5600194647",
         "author": "HALDANE MARTIN",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%203.jpg",
+        "type": "chair",
         "title": "Zulu Mama Stool, Designed by Haldane Martin, Photo Micky Hoyle",
         "attributes": {
             "Bily": {
@@ -993,9 +993,9 @@
                 "false": 0
             },
             "Dreveny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Kovovy": {
                 "Value": 0,
@@ -1013,9 +1013,9 @@
                 "false": 0
             },
             "Polstrovany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Vypletany": {
                 "Value": 0,
@@ -1063,13 +1063,13 @@
                 "false": 0
             },
             "Hranaty": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Obly": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Kulaty": {
@@ -1078,9 +1078,9 @@
                 "false": 0
             },
             "Ostry": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Leskly": {
                 "Value": 0,
@@ -1093,8 +1093,8 @@
                 "false": 0
             },
             "Natreny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Nalakovany": {
@@ -1213,8 +1213,8 @@
                 "false": 0
             },
             "Levny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Drahy": {
@@ -1233,8 +1233,8 @@
                 "false": 0
             },
             "Elegantni": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Staromodni": {
@@ -1263,8 +1263,8 @@
                 "false": 0
             },
             "Minimalisticky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Vyzdobeny ": {
@@ -1302,15 +1302,10 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Rezavy ": {
                 "Value": 0,
@@ -1358,9 +1353,9 @@
                 "false": 0
             },
             "Zahradni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nemocnicni ": {
                 "Value": 0,
@@ -1368,11 +1363,16 @@
                 "false": 0
             },
             "Zamecky": {
+                "Value": 0.0,
+                "true": 0,
+                "false": 1
+            },
+            "Kancelarsky": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
             },
-            "Kancelarsky": {
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -1383,8 +1383,8 @@
         "id": 4,
         "source": "https://www.flickr.com/photos/52634191@N08/4846713863",
         "author": "HALDANE MARTIN",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%204.jpg",
+        "type": "chair",
         "title": "Zulu Mama - White, Designed by Haldane Martin -Photo Jan Verboom",
         "attributes": {
             "Bily": {
@@ -1762,11 +1762,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -1836,6 +1831,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -1843,8 +1843,8 @@
         "id": 5,
         "source": "https://www.flickr.com/photos/10361931@N06/4542239299",
         "author": "Horia Varlan",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%205.jpg",
+        "type": "chair",
         "title": "Simple worn out wooden chair on the street",
         "attributes": {
             "Bily": {
@@ -2222,11 +2222,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -2296,6 +2291,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -2303,8 +2303,8 @@
         "id": 6,
         "source": "https://www.flickr.com/photos/91994044@N00/16956942479",
         "author": "quinet",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%206.jpg",
+        "type": "chair",
         "title": "Antique carved wooden chair",
         "attributes": {
             "Bily": {
@@ -2682,11 +2682,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -2756,6 +2751,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -2763,8 +2763,8 @@
         "id": 7,
         "source": "https://www.flickr.com/photos/36910487@N07/4725670725",
         "author": "TheLivingRoominKenmore",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%207.jpg",
+        "type": "chair",
         "title": "SOLD: Really old wooden chair",
         "attributes": {
             "Bily": {
@@ -3142,11 +3142,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -3216,6 +3211,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -3223,8 +3223,8 @@
         "id": 8,
         "source": "https://www.flickr.com/photos/36910487@N07/4527080835",
         "author": "TheLivingRoominKenmore",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%208.jpg",
+        "type": "chair",
         "title": "SOLD: Pink chair",
         "attributes": {
             "Bily": {
@@ -3602,11 +3602,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -3676,6 +3671,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -3683,8 +3683,8 @@
         "id": 9,
         "source": "https://www.flickr.com/photos/21987816@N04/15681778904",
         "author": "Susan McK",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%209.jpg",
+        "type": "chair",
         "title": "vintage secretary office swivel chair",
         "attributes": {
             "Bily": {
@@ -4062,11 +4062,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -4136,6 +4131,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -4143,8 +4143,8 @@
         "id": 10,
         "source": "https://www.flickr.com/photos/61423903@N06/5970923763",
         "author": "FutUndBeidl",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2010.jpg",
+        "type": "chair",
         "title": "Beach Chair",
         "attributes": {
             "Bily": {
@@ -4522,11 +4522,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -4596,6 +4591,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -4603,8 +4603,8 @@
         "id": 11,
         "source": "https://www.flickr.com/photos/62001817@N08/6989656297",
         "author": "GalToMassess",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2011.jpg",
+        "type": "chair",
         "title": "Chair",
         "attributes": {
             "Bily": {
@@ -4638,9 +4638,9 @@
                 "false": 0
             },
             "Zeleny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Modry": {
                 "Value": 0,
@@ -4703,9 +4703,9 @@
                 "false": 0
             },
             "Skleneny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Kameny": {
                 "Value": 0,
@@ -4718,9 +4718,9 @@
                 "false": 0
             },
             "Jednonohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Dvounohy": {
                 "Value": 0,
@@ -4728,9 +4728,9 @@
                 "false": 0
             },
             "Trinohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ctyrnohy": {
                 "Value": 0,
@@ -4853,8 +4853,8 @@
                 "false": 0
             },
             "Obycejny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Nepohodlny": {
@@ -4863,14 +4863,14 @@
                 "false": 0
             },
             "Zvlastni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Originalni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Detailni": {
                 "Value": 0,
@@ -4888,8 +4888,8 @@
                 "false": 0
             },
             "Nevkusny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Levny": {
@@ -4933,9 +4933,9 @@
                 "false": 0
             },
             "Ornamentalni ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Umelecky": {
                 "Value": 0,
@@ -4943,8 +4943,8 @@
                 "false": 0
             },
             "Minimalisticky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Vyzdobeny ": {
@@ -4982,11 +4982,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -5003,9 +4998,9 @@
                 "false": 0
             },
             "Skladaci": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nastavitelny": {
                 "Value": 0,
@@ -5038,8 +5033,8 @@
                 "false": 0
             },
             "Zahradni": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Nemocnicni ": {
@@ -5056,6 +5051,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -5063,8 +5063,8 @@
         "id": 12,
         "source": "https://www.flickr.com/photos/52634191@N08/4846332317",
         "author": "HALDANE MARTIN",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2012.jpg",
+        "type": "chair",
         "title": "Globe Chair - re-edition by Haldane Martin, Photo Justin Patrick",
         "attributes": {
             "Bily": {
@@ -5442,11 +5442,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -5516,6 +5511,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -5523,8 +5523,8 @@
         "id": 13,
         "source": null,
         "author": "Wicker Paradise",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2013.jpg",
+        "type": "chair",
         "title": "Vintage French Wicker Bobbing Chair",
         "attributes": {
             "Bily": {
@@ -5902,11 +5902,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -5976,6 +5971,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -5983,8 +5983,8 @@
         "id": 14,
         "source": "https://www.flickr.com/photos/52634191@N08/6836499722",
         "author": " HALDANE MARTIN",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2014.jpg",
+        "type": "chair",
         "title": "Source Chair (wire) - White Background, Designed by Haldane Martin - Photo Micky Hoyle",
         "attributes": {
             "Bily": {
@@ -6362,11 +6362,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -6436,6 +6431,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -6443,8 +6443,8 @@
         "id": 15,
         "source": "https://www.flickr.com/photos/70323761@N00/1587426808",
         "author": "wallyg",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2015.jpg",
+        "type": "chair",
         "title": "Versailles - Ch√¢teau de Versailles - salon d'Apollon - Throne",
         "attributes": {
             "Bily": {
@@ -6822,11 +6822,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -6896,6 +6891,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -6903,8 +6903,8 @@
         "id": 16,
         "source": "https://www.flickr.com/photos/29254252@N06/9834024183",
         "author": "Kyllikki3",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2016.jpg",
+        "type": "chair",
         "title": "Side X folding chair",
         "attributes": {
             "Bily": {
@@ -7282,11 +7282,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -7356,6 +7351,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -7363,8 +7363,8 @@
         "id": 17,
         "source": null,
         "author": " Wikimedia Commons",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2017.jpg",
+        "type": "chair",
         "title": "Acabashi",
         "attributes": {
             "Bily": {
@@ -7408,9 +7408,9 @@
                 "false": 0
             },
             "Fialovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Hnedy": {
                 "Value": 0,
@@ -7438,8 +7438,8 @@
                 "false": 0
             },
             "Kovovy": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Plastovy": {
@@ -7473,9 +7473,9 @@
                 "false": 0
             },
             "Mramorovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Jednonohy": {
                 "Value": 0,
@@ -7488,9 +7488,9 @@
                 "false": 0
             },
             "Trinohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ctyrnohy": {
                 "Value": 0,
@@ -7513,8 +7513,8 @@
                 "false": 0
             },
             "Kulaty": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Ostry": {
@@ -7533,8 +7533,8 @@
                 "false": 0
             },
             "Natreny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Nalakovany": {
@@ -7563,9 +7563,9 @@
                 "false": 0
             },
             "Rezbovany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Velky": {
                 "Value": 0,
@@ -7648,9 +7648,9 @@
                 "false": 0
             },
             "Nevkusny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Levny": {
                 "Value": 0,
@@ -7698,8 +7698,8 @@
                 "false": 0
             },
             "Umelecky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Minimalisticky": {
@@ -7742,11 +7742,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -7768,9 +7763,9 @@
                 "false": 0
             },
             "Nastavitelny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Kuchynsky": {
                 "Value": 0,
@@ -7803,16 +7798,21 @@
                 "false": 0
             },
             "Nemocnicni ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zamecky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Kancelarsky": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
+            },
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -7823,8 +7823,8 @@
         "id": 18,
         "source": "https://www.flickr.com/photos/11561957@N06/5834053502",
         "author": "failing_angel",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2018.jpg",
+        "type": "chair",
         "title": "Marble Chair (2008)",
         "attributes": {
             "Bily": {
@@ -7863,9 +7863,9 @@
                 "false": 0
             },
             "Modry": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Fialovy": {
                 "Value": 0,
@@ -7878,9 +7878,9 @@
                 "false": 0
             },
             "Ruzovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Bezovy": {
                 "Value": 0,
@@ -7888,9 +7888,9 @@
                 "false": 0
             },
             "Zlaty": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Dreveny": {
                 "Value": 0,
@@ -7938,9 +7938,9 @@
                 "false": 0
             },
             "Jednonohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Dvounohy": {
                 "Value": 0,
@@ -8008,9 +8008,9 @@
                 "false": 0
             },
             "Pruhovany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Hruby": {
                 "Value": 0,
@@ -8093,9 +8093,9 @@
                 "false": 0
             },
             "Detailni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Pohodlny": {
                 "Value": 0,
@@ -8108,9 +8108,9 @@
                 "false": 0
             },
             "Nevkusny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Levny": {
                 "Value": 0,
@@ -8163,14 +8163,14 @@
                 "false": 0
             },
             "Minimalisticky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Vyzdobeny ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Interierovy": {
                 "Value": 0,
@@ -8198,11 +8198,6 @@
                 "false": 0
             },
             "Spinavy": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
-            "Pozkozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -8258,9 +8253,9 @@
                 "false": 0
             },
             "Zahradni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nemocnicni ": {
                 "Value": 0,
@@ -8276,6 +8271,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -8283,8 +8283,8 @@
         "id": 20,
         "source": "https://www.flickr.com/photos/24017765@N04/2569711752",
         "author": "brenbot",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%201.jpg",
+        "type": "table",
         "title": "\"Found Table\"",
         "attributes": {
             "Bily": {
@@ -8662,11 +8662,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -8733,6 +8728,11 @@
                 "false": 0
             },
             "Kancelarsky": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
+            },
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -8743,8 +8743,8 @@
         "id": 21,
         "source": "https://www.flickr.com/photos/38869431@N00/4470259264",
         "author": "juhansonin",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%202.jpg",
+        "type": "table",
         "title": "Tables for you",
         "attributes": {
             "Bily": {
@@ -9122,11 +9122,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -9193,6 +9188,11 @@
                 "false": 0
             },
             "Kancelarsky": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
+            },
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -9203,8 +9203,8 @@
         "id": 22,
         "source": "https://www.flickr.com/photos/38869431@N00/4470259264",
         "author": "juhansonin",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%203.jpg",
+        "type": "table",
         "title": "Tables for you",
         "attributes": {
             "Bily": {
@@ -9582,11 +9582,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -9656,6 +9651,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -9663,8 +9663,8 @@
         "id": 23,
         "source": "https://www.flickr.com/photos/53901504@N06/5200210846",
         "author": "Jonas Design",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%204.jpg",
+        "type": "table",
         "title": "Long Tang Table",
         "attributes": {
             "Bily": {
@@ -10042,11 +10042,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -10116,6 +10111,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -10123,8 +10123,8 @@
         "id": 24,
         "source": "https://www.flickr.com/photos/33143672@N08/3084808482",
         "author": " Weld House LLC",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%205.jpg",
+        "type": "table",
         "title": "Dining table",
         "attributes": {
             "Bily": {
@@ -10502,11 +10502,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -10576,6 +10571,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -10583,8 +10583,8 @@
         "id": 25,
         "source": "https://www.flickr.com/photos/22419112@N08/2341626851",
         "author": "-Marlith-",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%206.jpg",
+        "type": "table",
         "title": "Table",
         "attributes": {
             "Bily": {
@@ -10613,8 +10613,8 @@
                 "false": 0
             },
             "Zluty": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Zeleny": {
@@ -10658,8 +10658,8 @@
                 "false": 0
             },
             "Kovovy": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Plastovy": {
@@ -10678,9 +10678,9 @@
                 "false": 0
             },
             "Vypletany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Skleneny": {
                 "Value": 0,
@@ -10718,9 +10718,9 @@
                 "false": 0
             },
             "Petinohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Hranaty": {
                 "Value": 0,
@@ -10758,9 +10758,9 @@
                 "false": 0
             },
             "Nalakovany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Pruhledny": {
                 "Value": 0,
@@ -10808,8 +10808,8 @@
                 "false": 0
             },
             "Siroky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Uzky": {
@@ -10878,8 +10878,8 @@
                 "false": 0
             },
             "Drahy": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Rustikalni": {
@@ -10888,9 +10888,9 @@
                 "false": 0
             },
             "Moderni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Elegantni": {
                 "Value": 0,
@@ -10898,14 +10898,14 @@
                 "false": 0
             },
             "Staromodni": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Exterierovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Luxusni": {
                 "Value": 0,
@@ -10958,14 +10958,9 @@
                 "false": 0
             },
             "Spinavy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
-            },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
+                "false": 1
             },
             "Roztrhany": {
                 "Value": 0,
@@ -11018,9 +11013,9 @@
                 "false": 0
             },
             "Zahradni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nemocnicni ": {
                 "Value": 0,
@@ -11036,6 +11031,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -11043,8 +11043,8 @@
         "id": 26,
         "source": "https://www.flickr.com/photos/24537121@N03/4353388318",
         "author": "mia.judkins",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%207.jpg",
+        "type": "table",
         "title": "Josh's coffee table",
         "attributes": {
             "Bily": {
@@ -11422,11 +11422,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -11496,6 +11491,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -11503,8 +11503,8 @@
         "id": 27,
         "source": "https://www.flickr.com/photos/60011841@N00/4508043191",
         "author": "atalou",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%208.jpg",
+        "type": "table",
         "title": "Tree trunk table",
         "attributes": {
             "Bily": {
@@ -11882,11 +11882,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -11956,6 +11951,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -11963,8 +11963,8 @@
         "id": 28,
         "source": "https://www.flickr.com/photos/52634191@N08/5600189525",
         "author": "HALDANE MARTIN",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%209.jpg",
+        "type": "table",
         "title": "Globe Table, Designed by Haldane Martin, Photo Micky Hoyle",
         "attributes": {
             "Bily": {
@@ -12342,11 +12342,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -12416,6 +12411,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -12423,8 +12423,8 @@
         "id": 29,
         "source": "https://www.flickr.com/photos/27463272@N06/28424827506",
         "author": "benstagl",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%2010.jpg",
+        "type": "table",
         "title": "Solid cast glass table",
         "attributes": {
             "Bily": {
@@ -12443,9 +12443,9 @@
                 "false": 0
             },
             "Cerveny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Oranzovy": {
                 "Value": 0,
@@ -12498,14 +12498,14 @@
                 "false": 0
             },
             "Kovovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Plastovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Plechovy": {
                 "Value": 0,
@@ -12543,9 +12543,9 @@
                 "false": 0
             },
             "Dvounohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Trinohy": {
                 "Value": 0,
@@ -12583,14 +12583,14 @@
                 "false": 0
             },
             "Leskly": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Matny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Natreny": {
                 "Value": 0,
@@ -12633,9 +12633,9 @@
                 "false": 0
             },
             "Maly": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Vysoky": {
                 "Value": 0,
@@ -12678,8 +12678,8 @@
                 "false": 0
             },
             "Nepohodlny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Zvlastni": {
@@ -12698,9 +12698,9 @@
                 "false": 0
             },
             "Pohodlny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Krasny": {
                 "Value": 0,
@@ -12743,9 +12743,9 @@
                 "false": 0
             },
             "Exterierovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Luxusni": {
                 "Value": 0,
@@ -12802,11 +12802,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -12818,8 +12813,8 @@
                 "false": 0
             },
             "Cisty ": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Skladaci": {
@@ -12853,9 +12848,9 @@
                 "false": 0
             },
             "Koupelnovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zahradni": {
                 "Value": 0,
@@ -12876,6 +12871,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -12883,8 +12883,8 @@
         "id": 30,
         "source": "https://www.flickr.com/photos/23622770@N00/4024999320",
         "author": "timcarney",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%2011.jpg",
+        "type": "table",
         "title": "Cherry Gate Leg Table",
         "attributes": {
             "Bily": {
@@ -13262,11 +13262,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -13336,6 +13331,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -13343,8 +13343,8 @@
         "id": 31,
         "source": "https://www.flickr.com/photos/43808069@N05/8211115908",
         "author": "Louise Cohen",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%2012.jpg",
+        "type": "table",
         "title": "LIFE IS GREAT table grill stove campfire heater",
         "attributes": {
             "Bily": {
@@ -13722,11 +13722,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -13796,6 +13791,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -13803,8 +13803,8 @@
         "id": 32,
         "source": "https://www.flickr.com/photos/76061588@N03/8453136216",
         "author": "Wicker Paradise",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%2013.jpg",
+        "type": "table",
         "title": "Photo of the Mustache Style Wood Coffee Table",
         "attributes": {
             "Bily": {
@@ -14182,11 +14182,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -14256,6 +14251,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -14263,8 +14263,8 @@
         "id": 33,
         "source": "https://www.flickr.com/photos/16324044@N00/1658994999",
         "author": "Eva the Weaver",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%2014.jpg",
+        "type": "table",
         "title": "Stone table and benches",
         "attributes": {
             "Bily": {
@@ -14288,9 +14288,9 @@
                 "false": 0
             },
             "Oranzovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zluty": {
                 "Value": 0,
@@ -14303,9 +14303,9 @@
                 "false": 0
             },
             "Modry": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Fialovy": {
                 "Value": 0,
@@ -14343,9 +14343,9 @@
                 "false": 0
             },
             "Plastovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Plechovy": {
                 "Value": 0,
@@ -14373,9 +14373,9 @@
                 "false": 0
             },
             "Mramorovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Jednonohy": {
                 "Value": 0,
@@ -14403,8 +14403,8 @@
                 "false": 0
             },
             "Hranaty": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Obly": {
@@ -14453,8 +14453,8 @@
                 "false": 0
             },
             "Hruby": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Vykladany": {
@@ -14468,19 +14468,19 @@
                 "false": 0
             },
             "Velky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Maly": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Vysoky": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nizky ": {
                 "Value": 0,
@@ -14568,9 +14568,9 @@
                 "false": 0
             },
             "Moderni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Elegantni": {
                 "Value": 0,
@@ -14623,8 +14623,8 @@
                 "false": 0
             },
             "Stary": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Novy": {
@@ -14638,11 +14638,6 @@
                 "false": 0
             },
             "Spinavy": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
-            "Pozkozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -14683,9 +14678,9 @@
                 "false": 0
             },
             "Detsky": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Vojensky": {
                 "Value": 0,
@@ -14716,6 +14711,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -14723,8 +14723,8 @@
         "id": 34,
         "source": "https://www.flickr.com/photos/75001512@N00/198784420/",
         "author": "Joel Kramer",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%201.jpg",
+        "type": "bed",
         "title": "big bed",
         "attributes": {
             "Bily": {
@@ -15102,11 +15102,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -15176,6 +15171,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -15183,18 +15183,18 @@
         "id": 35,
         "source": "https://www.flickr.com/photos/elissamae/3864706307/",
         "author": "Elissa Merola",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%202.jpg",
+        "type": "bed",
         "title": "My New Bed!",
         "attributes": {
             "Bily": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Sedy": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Cerny": {
@@ -15213,9 +15213,9 @@
                 "false": 0
             },
             "Zluty": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zeleny": {
                 "Value": 0,
@@ -15403,8 +15403,8 @@
                 "false": 0
             },
             "Nizky ": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Siroky": {
@@ -15423,9 +15423,9 @@
                 "false": 0
             },
             "Kratky": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Osklivy": {
                 "Value": 0,
@@ -15483,9 +15483,9 @@
                 "false": 0
             },
             "Rustikalni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Moderni": {
                 "Value": 0,
@@ -15493,9 +15493,9 @@
                 "false": 0
             },
             "Elegantni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Staromodni": {
                 "Value": 0,
@@ -15538,9 +15538,9 @@
                 "false": 0
             },
             "Prirodni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Stary": {
                 "Value": 0,
@@ -15548,8 +15548,8 @@
                 "false": 0
             },
             "Novy": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Odreny": {
@@ -15562,20 +15562,15 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
             },
             "Rezavy ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Cisty ": {
                 "Value": 0,
@@ -15583,9 +15578,9 @@
                 "false": 0
             },
             "Skladaci": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nastavitelny": {
                 "Value": 0,
@@ -15628,11 +15623,16 @@
                 "false": 0
             },
             "Zamecky": {
+                "Value": 0.0,
+                "true": 0,
+                "false": 1
+            },
+            "Kancelarsky": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
             },
-            "Kancelarsky": {
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -15643,8 +15643,8 @@
         "id": 36,
         "source": "https://www.flickr.com/photos/jopoe/4695978788/",
         "author": "Joanna Poe",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%203.jpg",
+        "type": "bed",
         "title": "Fail bed",
         "attributes": {
             "Bily": {
@@ -16022,11 +16022,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -16096,6 +16091,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -16103,13 +16103,13 @@
         "id": 37,
         "source": "https://www.flickr.com/photos/dreamsbedsandmattresses/4995114857/",
         "author": "Dreams",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%204.jpg",
+        "type": "bed",
         "title": "Dreams Jasmine Bedstead",
         "attributes": {
             "Bily": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Sedy": {
@@ -16138,9 +16138,9 @@
                 "false": 0
             },
             "Zeleny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Modry": {
                 "Value": 0,
@@ -16153,9 +16153,9 @@
                 "false": 0
             },
             "Hnedy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ruzovy": {
                 "Value": 0,
@@ -16218,9 +16218,9 @@
                 "false": 0
             },
             "Jednonohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Dvounohy": {
                 "Value": 0,
@@ -16228,9 +16228,9 @@
                 "false": 0
             },
             "Trinohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ctyrnohy": {
                 "Value": 0,
@@ -16268,8 +16268,8 @@
                 "false": 0
             },
             "Matny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Natreny": {
@@ -16278,8 +16278,8 @@
                 "false": 0
             },
             "Nalakovany": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Pruhledny": {
@@ -16393,8 +16393,8 @@
                 "false": 0
             },
             "Levny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Drahy": {
@@ -16423,9 +16423,9 @@
                 "false": 0
             },
             "Exterierovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Luxusni": {
                 "Value": 0,
@@ -16482,11 +16482,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -16528,9 +16523,9 @@
                 "false": 0
             },
             "Vojensky": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Koupelnovy": {
                 "Value": 0,
@@ -16538,14 +16533,14 @@
                 "false": 0
             },
             "Zahradni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nemocnicni ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zamecky": {
                 "Value": 0,
@@ -16556,6 +16551,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -16563,8 +16563,8 @@
         "id": 38,
         "source": "https://pixabay.com/illustrations/bunkbed-metal-mattress-ladder-5004237/",
         "author": "Jazella",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%205.jpg",
+        "type": "bed",
         "title": "Bunkbed Metal Mattress",
         "attributes": {
             "Bily": {
@@ -16942,11 +16942,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -17016,6 +17011,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -17023,8 +17023,8 @@
         "id": 39,
         "source": "https://www.publicdomainpictures.net/cs/view-image.php?image=73471",
         "author": "Anne Lowe",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%206.jpg",
+        "type": "bed",
         "title": "Star· nemocnice postel",
         "attributes": {
             "Bily": {
@@ -17402,11 +17402,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -17476,6 +17471,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -17483,8 +17483,8 @@
         "id": 40,
         "source": "https://pixabay.com/illustrations/bed-bedstead-bedside-night-camp-6726149/",
         "author": "anaterate",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%207.jpg",
+        "type": "bed",
         "title": "Bed",
         "attributes": {
             "Bily": {
@@ -17862,11 +17862,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -17936,6 +17931,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -17943,8 +17943,8 @@
         "id": 41,
         "source": "https://www.lookandlearn.com/history-images/YSH006859/Bed-frame-designed-by-Henry-Boyd",
         "author": "unknown author",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%208.jpg",
+        "type": "bed",
         "title": "Bed frame designed by Henry Boyd",
         "attributes": {
             "Bily": {
@@ -18322,11 +18322,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -18396,6 +18391,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -18403,8 +18403,8 @@
         "id": 42,
         "source": "https://www.lookandlearn.com/history-images/YW065187L/Cast-iron-hospital-bed-England-1851-1900",
         "author": "unknown author",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%209.jpg",
+        "type": "bed",
         "title": "Cast iron hospital bed, England, 1851ñ1900",
         "attributes": {
             "Bily": {
@@ -18428,9 +18428,9 @@
                 "false": 0
             },
             "Oranzovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zluty": {
                 "Value": 0,
@@ -18438,9 +18438,9 @@
                 "false": 0
             },
             "Zeleny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Modry": {
                 "Value": 0,
@@ -18453,9 +18453,9 @@
                 "false": 0
             },
             "Hnedy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ruzovy": {
                 "Value": 0,
@@ -18493,9 +18493,9 @@
                 "false": 0
             },
             "Polstrovany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Vypletany": {
                 "Value": 0,
@@ -18523,9 +18523,9 @@
                 "false": 0
             },
             "Dvounohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Trinohy": {
                 "Value": 0,
@@ -18573,9 +18573,9 @@
                 "false": 0
             },
             "Natreny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nalakovany": {
                 "Value": 0,
@@ -18663,9 +18663,9 @@
                 "false": 0
             },
             "Zvlastni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Originalni": {
                 "Value": 0,
@@ -18713,9 +18713,9 @@
                 "false": 0
             },
             "Elegantni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Staromodni": {
                 "Value": 0,
@@ -18753,9 +18753,9 @@
                 "false": 0
             },
             "Interierovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Prirodni": {
                 "Value": 0,
@@ -18763,8 +18763,8 @@
                 "false": 0
             },
             "Stary": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Novy": {
@@ -18778,11 +18778,6 @@
                 "false": 0
             },
             "Spinavy": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
-            "Pozkozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -18856,6 +18851,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -18863,8 +18863,8 @@
         "id": 43,
         "source": "https://pixabay.com/illustrations/bed-canopy-bed-historical-1910275/",
         "author": "SilviaP_Design",
-        "type": "bed",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/bed/Bed%2010.jpg",
+        "type": "bed",
         "title": "Bed Canopy",
         "attributes": {
             "Bily": {
@@ -19242,11 +19242,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -19316,6 +19311,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -19323,8 +19323,8 @@
         "id": 44,
         "source": "https://www.flickr.com/photos/81643710@N00/37042565370",
         "author": "Thomas",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%201.jpg",
+        "type": "cabinet",
         "title": "Empty Cupboard",
         "attributes": {
             "Bily": {
@@ -19702,11 +19702,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -19776,6 +19771,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -19783,8 +19783,8 @@
         "id": 45,
         "source": "https://www.rawpixel.com/image/3390680/free-illustration-image-antique-art-artwork",
         "author": "Edna C. Rex",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%202.jpg",
+        "type": "cabinet",
         "title": "Wardrobe, John Marshall's (c. 1937)",
         "attributes": {
             "Bily": {
@@ -20162,11 +20162,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -20236,6 +20231,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -20243,8 +20243,8 @@
         "id": 46,
         "source": "https://www.lookandlearn.com/history-images/YM0056356/Wardrobe",
         "author": "unknown author",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%203.jpg",
+        "type": "cabinet",
         "title": "Wardrobe",
         "attributes": {
             "Bily": {
@@ -20622,11 +20622,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -20696,6 +20691,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -20703,8 +20703,8 @@
         "id": 47,
         "source": "https://commons.wikimedia.org/wiki/File:File_Cabinet_.jpg",
         "author": "rrafson",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%204.jpg",
+        "type": "cabinet",
         "title": "2 drawer",
         "attributes": {
             "Bily": {
@@ -21082,11 +21082,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -21156,6 +21151,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -21163,8 +21163,8 @@
         "id": 48,
         "source": "https://www.maxpixel.net/Old-Closet-Wooden-White-Doors-Open-Cabinet-4758960",
         "author": "unknown author",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%205.png",
+        "type": "cabinet",
         "title": "Old Closet Wooden White Doors Open Cabinet",
         "attributes": {
             "Bily": {
@@ -21188,9 +21188,9 @@
                 "false": 0
             },
             "Oranzovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zluty": {
                 "Value": 0,
@@ -21208,14 +21208,14 @@
                 "false": 0
             },
             "Fialovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Hnedy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ruzovy": {
                 "Value": 0,
@@ -21253,9 +21253,9 @@
                 "false": 0
             },
             "Polstrovany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Vypletany": {
                 "Value": 0,
@@ -21273,9 +21273,9 @@
                 "false": 0
             },
             "Mramorovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Jednonohy": {
                 "Value": 0,
@@ -21298,9 +21298,9 @@
                 "false": 0
             },
             "Petinohy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Hranaty": {
                 "Value": 0,
@@ -21333,8 +21333,8 @@
                 "false": 0
             },
             "Natreny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Nalakovany": {
@@ -21393,9 +21393,9 @@
                 "false": 0
             },
             "Uzky": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Dlouhy": {
                 "Value": 0,
@@ -21443,9 +21443,9 @@
                 "false": 0
             },
             "Krasny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Nevkusny": {
                 "Value": 0,
@@ -21508,9 +21508,9 @@
                 "false": 0
             },
             "Vyzdobeny ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Interierovy": {
                 "Value": 0,
@@ -21542,11 +21542,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -21558,8 +21553,8 @@
                 "false": 0
             },
             "Cisty ": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Skladaci": {
@@ -21613,6 +21608,11 @@
                 "false": 0
             },
             "Kancelarsky": {
+                "Value": 0.0,
+                "true": 0,
+                "false": 1
+            },
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
@@ -21623,8 +21623,8 @@
         "id": 49,
         "source": "https://pixabay.com/photos/tall-cabinet-383165/",
         "author": "stux",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%206.jpg",
+        "type": "cabinet",
         "title": "Tall Cabinet",
         "attributes": {
             "Bily": {
@@ -22002,11 +22002,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -22076,6 +22071,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -22083,8 +22083,8 @@
         "id": 50,
         "source": "https://commons.wikimedia.org/wiki/File:Armchair_(fauteuil)_MET_DP276258.jpg",
         "author": "Metropolitan Museum of Art",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2019.jpg",
+        "type": "chair",
         "title": "Armchair (fauteuil)",
         "attributes": {
             "Bily": {
@@ -22462,11 +22462,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -22536,6 +22531,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -22543,8 +22543,8 @@
         "id": 51,
         "source": "https://commons.wikimedia.org/wiki/File:17th-Century_Cabinet_of_Curiosities.jpg",
         "author": "Rau Antiques",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%207.jpg",
+        "type": "cabinet",
         "title": "17th-Century Cabinet of Curiosities",
         "attributes": {
             "Bily": {
@@ -22922,11 +22922,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -22996,6 +22991,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -23003,8 +23003,8 @@
         "id": 52,
         "source": "https://www.flickr.com/photos/erinwilliamson/3254054404/",
         "author": "erin williamson",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%208.jpg",
+        "type": "cabinet",
         "title": "kitchen ikea cabinet",
         "attributes": {
             "Bily": {
@@ -23382,11 +23382,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -23456,6 +23451,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -23463,8 +23463,8 @@
         "id": 53,
         "source": "https://picryl.com/media/sri-lankan-ivory-cabinet-walters-711197-2ae7fe",
         "author": "The Walters Art Museum",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%209.jpg",
+        "type": "cabinet",
         "title": "Sri Lankan - Ivory Cabinet",
         "attributes": {
             "Bily": {
@@ -23842,11 +23842,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -23916,6 +23911,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -23923,8 +23923,8 @@
         "id": 54,
         "source": "https://commons.wikimedia.org/wiki/File:Transfer_bench.jpg",
         "author": "Roger Mommaerts",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2020.jpg",
+        "type": "chair",
         "title": "Transfer bench",
         "attributes": {
             "Bily": {
@@ -24302,11 +24302,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -24376,6 +24371,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -24383,8 +24383,8 @@
         "id": 57,
         "source": "https://www.flickr.com/photos/timcarney/4024248921",
         "author": "Tim Carney",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2021.jpg",
+        "type": "chair",
         "title": "Old World Chair of Cocobolo",
         "attributes": {
             "Bily": {
@@ -24762,11 +24762,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -24836,6 +24831,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -24843,14 +24843,14 @@
         "id": 58,
         "source": "https://www.flickr.com/photos/ergonomic_office/3604453020",
         "author": "Kare_Products",
-        "type": "chair",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/chair/Chair%2022.jpg",
+        "type": "chair",
         "title": "High Back Chair",
         "attributes": {
             "Bily": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Sedy": {
                 "Value": 0,
@@ -24868,9 +24868,9 @@
                 "false": 0
             },
             "Oranzovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zluty": {
                 "Value": 0,
@@ -24898,9 +24898,9 @@
                 "false": 0
             },
             "Ruzovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Bezovy": {
                 "Value": 0,
@@ -24913,14 +24913,14 @@
                 "false": 0
             },
             "Dreveny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Kovovy": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Plastovy": {
                 "Value": 0,
@@ -25038,9 +25038,9 @@
                 "false": 0
             },
             "Vykladany": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Rezbovany": {
                 "Value": 0,
@@ -25048,8 +25048,8 @@
                 "false": 0
             },
             "Velky": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Maly": {
@@ -25088,8 +25088,8 @@
                 "false": 0
             },
             "Osklivy": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Obycejny": {
@@ -25098,9 +25098,9 @@
                 "false": 0
             },
             "Nepohodlny": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zvlastni": {
                 "Value": 0,
@@ -25168,9 +25168,9 @@
                 "false": 0
             },
             "Luxusni": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Ornamentalni ": {
                 "Value": 0,
@@ -25222,11 +25222,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -25248,8 +25243,8 @@
                 "false": 0
             },
             "Nastavitelny": {
-                "Value": 0,
-                "true": 0,
+                "Value": 1.0,
+                "true": 1,
                 "false": 0
             },
             "Kuchynsky": {
@@ -25283,9 +25278,9 @@
                 "false": 0
             },
             "Nemocnicni ": {
-                "Value": 0,
+                "Value": 0.0,
                 "true": 0,
-                "false": 0
+                "false": 1
             },
             "Zamecky": {
                 "Value": 0,
@@ -25296,6 +25291,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -25303,8 +25303,8 @@
         "id": 56,
         "source": "https://pixabay.com/photos/bathroom-cabinet-sink-faucet-225047/",
         "author": "Seth Rolland",
-        "type": "table",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/table/Table%2015.jpg",
+        "type": "table",
         "title": "Abanico Dining Table",
         "attributes": {
             "Bily": {
@@ -25682,11 +25682,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -25756,6 +25751,11 @@
                 "Value": 0,
                 "true": 0,
                 "false": 0
+            },
+            "Poskozeny": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
             }
         }
     },
@@ -25763,8 +25763,8 @@
         "id": 55,
         "source": "https://pixabay.com/photos/bathroom-cabinet-sink-faucet-225047/",
         "author": "unknown",
-        "type": "cabinet",
         "filename": "https://obrazkovy-dataset.herokuapp.com/static/img/cabinet/Cabinet%2010.jpg",
+        "type": "cabinet",
         "title": "Bathroom cabinet",
         "attributes": {
             "Bily": {
@@ -26142,11 +26142,6 @@
                 "true": 0,
                 "false": 0
             },
-            "Pozkozeny": {
-                "Value": 0,
-                "true": 0,
-                "false": 0
-            },
             "Roztrhany": {
                 "Value": 0,
                 "true": 0,
@@ -26213,6 +26208,11 @@
                 "false": 0
             },
             "Kancelarsky": {
+                "Value": 0,
+                "true": 0,
+                "false": 0
+            },
+            "Poskozeny": {
                 "Value": 0,
                 "true": 0,
                 "false": 0
