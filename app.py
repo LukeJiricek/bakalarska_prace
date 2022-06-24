@@ -193,21 +193,26 @@ def generate_objects_list(diacritic = False):
 
         for true_answer in true_answers:
             updated_object = next(item for item in objects_list if item['id'] == answer.image_id)
-            if diacritic == False:
-                updated_object['attributes'][unidecode.unidecode(true_answer)][True] += 1
-                updated_object['attributes'][unidecode.unidecode(true_answer)]['Value'] = round(updated_object['attributes'][unidecode.unidecode(true_answer)][True] / (updated_object['attributes'][unidecode.unidecode(true_answer)][True] + updated_object['attributes'][unidecode.unidecode(true_answer)][False]), 2)
-            else:
-                updated_object['attributes'][true_answer][True] += 1
-                updated_object['attributes'][true_answer]['Value'] = round(updated_object['attributes'][true_answer][True] / (updated_object['attributes'][true_answer][True] + updated_object['attributes'][true_answer][False]), 2)
-
+            try:
+                if diacritic == False:
+                    updated_object['attributes'][unidecode.unidecode(true_answer)][True] += 1
+                    updated_object['attributes'][unidecode.unidecode(true_answer)]['Value'] = round(updated_object['attributes'][unidecode.unidecode(true_answer)][True] / (updated_object['attributes'][unidecode.unidecode(true_answer)][True] + updated_object['attributes'][unidecode.unidecode(true_answer)][False]), 2)
+                else:
+                    updated_object['attributes'][true_answer][True] += 1
+                    updated_object['attributes'][true_answer]['Value'] = round(updated_object['attributes'][true_answer][True] / (updated_object['attributes'][true_answer][True] + updated_object['attributes'][true_answer][False]), 2)
+            except Exception:
+                pass
         for false_answer in false_answers:
             updated_object = next(item for item in objects_list if item['id'] == answer.image_id)
-            if diacritic == False:
-                updated_object['attributes'][unidecode.unidecode(false_answer)][False] += 1
-                updated_object['attributes'][unidecode.unidecode(false_answer)]['Value'] = round(updated_object['attributes'][unidecode.unidecode(false_answer)][True] / (updated_object['attributes'][unidecode.unidecode(false_answer)][True] + updated_object['attributes'][unidecode.unidecode(false_answer)][False]), 2)
-            else:
-                updated_object['attributes'][false_answer][False] += 1
-                updated_object['attributes'][false_answer]['Value'] = round(updated_object['attributes'][false_answer][True] / (updated_object['attributes'][false_answer][True] + updated_object['attributes'][false_answer][False]), 2)
+            try:
+                if diacritic == False:
+                    updated_object['attributes'][unidecode.unidecode(false_answer)][False] += 1
+                    updated_object['attributes'][unidecode.unidecode(false_answer)]['Value'] = round(updated_object['attributes'][unidecode.unidecode(false_answer)][True] / (updated_object['attributes'][unidecode.unidecode(false_answer)][True] + updated_object['attributes'][unidecode.unidecode(false_answer)][False]), 2)
+                else:
+                    updated_object['attributes'][false_answer][False] += 1
+                    updated_object['attributes'][false_answer]['Value'] = round(updated_object['attributes'][false_answer][True] / (updated_object['attributes'][false_answer][True] + updated_object['attributes'][false_answer][False]), 2)
+            except Exception:
+                pass
 
     return objects_list
 
