@@ -422,4 +422,9 @@ button[disabled]{
     #attribute-form {
         grid-template-columns: 1fr;
     }
+
+    #submit {
+        grid-column: 1 / 2;
+    }
+    
 }
