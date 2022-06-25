@@ -173,7 +173,7 @@ def generate_objects_list(diacritic = False):
         else:
             attributes_list.append(attribute.name)
 
-    attributes_dict = {new_dict: {'Value':0,True:0,False:0} for new_dict in attributes_list}
+    attributes_dict = {new_dict: {'Value':'',True:0,False:0} for new_dict in attributes_list}
 
     objects_list = []
     images = Image.query.all()
