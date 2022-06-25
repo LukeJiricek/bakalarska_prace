@@ -21,8 +21,9 @@ KOMPLETNÍ JSON DATA - popis dat
 - "title": titul obrázku, popsaný autorem, uvedený v rámci Creative Commons licence
 - "attributes" seznam atributů:
     - U každého atributu je uveden:
-        - "Value" :  hodnota v rozpětí 0.00 a 1.00 popisující nakolik daná vlastnost popisuje objekt:
+        - "Value" :  hodnota v rozpětí 0.00 a 1.00 popisující nakolik daná vlastnost popisuje objekt (počet kladných odpovědí / počet všech odpovědí):
             - 1.00 = každý tazatel uvedl, že vlastnost popisuje objektu
+            - okolo 0.50 = tazatelé byli nerozhodní, jestli daná vlastnost popisuje objekt
             - 0.00 = každý tazatel uvedl, že vlasnost nepopisuje objekt
         - počet kladných odpovědí (Tazatel uvedl, že daná vlastnost popisuje objekt)
         - počet záporných odpovědí (Tazatel uvedl, že daná vlastnost nepopisuje objekt)
