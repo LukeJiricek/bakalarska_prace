@@ -17,6 +17,7 @@ def create_app():
     if DB_URL.startswith("postgres://"):
         DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.secret_key = '6e2db44e-2b19-4909-93b4-65ca2e10a135'
     db.init_app(app)
     return app
@@ -179,9 +180,10 @@ def generate_objects_list(diacritic = False):
     for image in images:
         img_dict = image.__dict__
         img_dict.pop('_sa_instance_state')
-        img_dict['filename'] = img_dict['filename'].replace("..", "https://obrazkovy-dataset.herokuapp.com")
-        # img_dict['filename'] = img_dict['filename'].replace("..", request.url_root) DYNAMIC URL
-        img_dict['filename'] = img_dict['filename'].replace(" ", "%20")
+        img_dict['filename'] = img_dict['link'].split("/")[3]
+        img_dict['link'] = img_dict['link'].replace("..", "https://obrazkovy-dataset.herokuapp.com")
+        # img_dict['link'] = img_dict['link'].replace("..", request.url_root) DYNAMIC URL
+        img_dict['link'] = img_dict['link'].replace(" ", "%20")
         img_dict["attributes"] = copy.deepcopy(attributes_dict)
         objects_list.append(img_dict)
 
@@ -222,7 +224,8 @@ def generate_objects_min_list(diacritic = False):
     for object in objects_list:
         new_min_object = {}
         new_min_object['id'] = object['id']
-        new_min_object['Objekt'] = object['filename']
+        new_min_object['filename'] = object['filename']
+        new_min_object['link'] = object['link']
         for key in object['attributes']:
             new_min_object[key] = object['attributes'][key]['Value']
         objects_min_list.append(new_min_object)
@@ -283,7 +286,7 @@ def generate_zip():
         print("All data generated")
         return 'dataset.zip'
 
-job = scheduler.add_job(generate_zip, 'interval', minutes=15)
+job = scheduler.add_job(generate_zip, 'interval', minutes=1)
 
 
 
@@ -339,7 +342,7 @@ def form():
 
 
     request_id=new_request(new_image.id)
-    return render_template('form.html', current_image=new_image.filename, image_ID=new_image.id, request_ID=request_id, author=new_image.author, title=new_image.title, link=new_image.source)
+    return render_template('form.html', current_image=new_image.link, image_ID=new_image.id, request_ID=request_id, author=new_image.author, title=new_image.title, link=new_image.source)
 
 @app.route("/form2", methods=['GET', 'POST'])
 def form2():
@@ -355,6 +358,6 @@ def form2():
 
     new_image = get_image_2()
     new_request, attributes=new_request_2(new_image.id)
-    return render_template('form2.html', current_image=new_image.filename, image_ID=new_image.id, request_ID=new_request, author=new_image.author, title=new_image.title, attributes=attributes)
+    return render_template('form2.html', current_image=new_image.link, image_ID=new_image.id, request_ID=new_request, author=new_image.author, title=new_image.title, attributes=attributes)
 
 
