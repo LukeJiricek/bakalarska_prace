@@ -215,6 +215,7 @@ def generate_objects_list(diacritic = False):
                     updated_object['attributes'][false_answer]['Value'] = round(updated_object['attributes'][false_answer][True] / (updated_object['attributes'][false_answer][True] + updated_object['attributes'][false_answer][False]), 2)
             except Exception:
                 pass
+    objects_list = sorted(objects_list, key=lambda d: d['id'])
 
     return objects_list
 
@@ -286,7 +287,7 @@ def generate_zip():
         print("All data generated")
         return 'dataset.zip'
 
-job = scheduler.add_job(generate_zip, 'interval', minutes=15)
+job = scheduler.add_job(generate_zip, 'interval', minutes=1)
 
 
 

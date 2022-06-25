@@ -103,6 +103,7 @@ nav ul {
 main section {
     margin: 0 0 1vw 0;
     grid-column: 2;
+    display:grid;
 }
 
 
