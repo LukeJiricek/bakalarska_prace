@@ -287,7 +287,7 @@ def generate_zip():
         print("All data generated")
         return 'dataset.zip'
 
-job = scheduler.add_job(generate_zip, 'interval', minutes=1)
+job = scheduler.add_job(generate_zip, 'interval', minutes=5)
 
 
 

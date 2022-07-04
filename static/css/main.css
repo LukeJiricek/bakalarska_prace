@@ -175,6 +175,10 @@ main section {
     padding: 0;
 }
 
+.accordion {
+    margin: 0;
+}
+
 #attribute-form {
     grid-row: span 2;
     display: grid;
