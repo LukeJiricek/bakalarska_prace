@@ -153,6 +153,12 @@ main section {
     box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px;
 }
 
+.highlight-2 {
+    background-color: hsla(0, 0%, 100%, 0.95);
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px;
+}
+
 .main-text {
     padding: 1.5rem;
     margin-bottom: 1.5rem
