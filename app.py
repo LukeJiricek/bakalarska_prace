@@ -84,7 +84,7 @@ def save_answer(data):
     for value in data_attributes:
         if len(value[1].strip()) != 0 :
             attributes.append(value[1].strip())
-    answer = Answer(image_id=data['imageID'], attributes=attributes, ip=request.access_route[0])
+    answer = Answer(image_id=data['imageID'], attributes=attributes)
     db.session.add(answer)
     db.session.commit()
 
@@ -159,7 +159,7 @@ def save_answer_2(attributes, values, id):
             false_list.append(attribute)
         elif value == 'true':
             true_list.append(attribute)
-    answer = Answer2(image_id=id, attributes_true=true_list, attributes_false=false_list, ip=request.access_route[0])
+    answer = Answer2(image_id=id, attributes_true=true_list, attributes_false=false_list)
     db.session.add(answer)
     db.session.commit()
 
@@ -287,7 +287,7 @@ def generate_zip():
         print("All data generated")
         return 'dataset.zip'
 
-job = scheduler.add_job(generate_zip, 'interval', minutes=5)
+job = scheduler.add_job(generate_zip, 'interval', minutes=1)
 
 
 
