@@ -34,7 +34,7 @@ def delete_requests():
         db.session.commit()
         print("Deleting old requests")
 scheduler = BackgroundScheduler()
-job = scheduler.add_job(delete_requests, 'interval', minutes=15)
+job = scheduler.add_job(delete_requests, 'interval', minutes=30)
 scheduler.start()
 
 # Fuknce k prvnímu formuláři
@@ -287,7 +287,7 @@ def generate_zip():
         print("All data generated")
         return 'dataset.zip'
 
-job = scheduler.add_job(generate_zip, 'interval', minutes=1)
+job = scheduler.add_job(generate_zip, 'interval', minutes=30)
 
 
 
