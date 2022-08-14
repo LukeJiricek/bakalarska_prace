@@ -9,7 +9,9 @@ import os, re, uuid, threading, time, random, json, unidecode, copy, csv, shutil
 db = SQLAlchemy()
 sem = threading.Semaphore()
 #   RUN ON LOCAL:
+#       venv/scripts/activate
 #       $env:DATABASE_URL=$(heroku config:get DATABASE_URL -a obrazkovy-dataset)
+#       flask run
 
 def create_app():
     app = Flask(__name__)
@@ -233,31 +235,33 @@ def generate_objects_min_list(diacritic = False):
     return objects_min_list
 
 def generate_json():
-    objects_list = generate_objects_list()
-    objects_json = json.dumps(objects_list, ensure_ascii=False, indent=4)
-    with open('download/dataset.json', 'w') as outfile:
-        outfile.write(objects_json)
+    objects_list = generate_objects_list(True)
+    with open('download/dataset.json', 'w', encoding='utf8') as outfile:
+        json.dump(objects_list, outfile, ensure_ascii=False, indent=4)
+    objects_min_list = generate_objects_min_list(True)
+    with open('download/dataset-minimal.json', 'w', encoding='utf8') as outfile:
+        json.dump(objects_min_list, outfile, ensure_ascii=False, indent=4)
     zipObj = ZipFile('download/dataset-json.zip', 'w')
     zipObj.write('download/readme.txt', 'readme.txt')
+    zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
     zipObj.write('download/dataset.json', 'dataset.json')
     zipObj.close()
     return 'dataset.json'
 
-def generate_min_json():
-    objects_min_list = generate_objects_min_list()
-    min_objects_json = json.dumps(objects_min_list, ensure_ascii=False, indent=4)
-    with open('download/dataset-minimal.json', 'w') as outfile:
-        outfile.write(min_objects_json)
+""" def generate_min_json():
+    objects_min_list = generate_objects_min_list(True)
+    with open('download/dataset-minimal.json', 'w', encoding='utf8') as outfile:
+        json.dump(objects_min_list, outfile, ensure_ascii=False, indent=4)
     zipObj = ZipFile('download/dataset-min-json.zip', 'w')
     zipObj.write('download/readme.txt', 'readme.txt')
     zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
     zipObj.close()
-    return 'dataset-minimal.json'
+    return 'dataset-minimal.json' """
 
 def generate_csv():
     min_csv_list = generate_objects_min_list(True)
     keys =  min_csv_list[0].keys()
-    with open('download/dataset.csv', 'w', newline='') as output_file:
+    with open('download/dataset.csv', 'w', newline='', encoding='utf8') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(min_csv_list)
@@ -274,12 +278,11 @@ def generate_picture_zip():
 def generate_zip():
     with app.app_context():
         generate_json()
-        generate_min_json()
+        # generate_min_json()
         generate_csv()
         generate_picture_zip()
         zipObj = ZipFile('download/dataset.zip', 'w')
         zipObj.write('download/dataset.csv', 'dataset.csv')
-        zipObj.write('download/dataset-minimal.json', 'dataset-minimal.json')
         zipObj.write('download/dataset.json', 'dataset.json')
         zipObj.write('download/img.zip', 'img.zip')
         zipObj.write('download/readme.txt', 'readme.txt')
@@ -304,9 +307,9 @@ def download_pictures():
 def download_json():
     return send_from_directory('download/', 'dataset-json.zip', as_attachment=True)
 
-@app.route('/download_min_json')
+""" @app.route('/download_min_json')
 def download_min_json():
-    return send_from_directory('download/', 'dataset-min-json.zip', as_attachment=True)
+    return send_from_directory('download/', 'dataset-min-json.zip', as_attachment=True) """
 
 @app.route('/download_csv')
 def download_csv():
@@ -344,6 +347,10 @@ def form():
 
     request_id=new_request(new_image.id)
     return render_template('form.html', current_image=new_image.link, image_ID=new_image.id, request_ID=request_id, author=new_image.author, title=new_image.title, link=new_image.source)
+
+@app.route("/form2/guide")
+def form2_guide():
+    return render_template('form2_guide.html')
 
 @app.route("/form2", methods=['GET', 'POST'])
 def form2():

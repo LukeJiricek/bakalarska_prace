@@ -7,7 +7,7 @@
                     {{ title }}, {{ author }}, licensed under Creative Commons
             </p>
         </article>
-        <article class="article-grid highlight">
+        <!-- <article class="article-grid highlight">
             <h3>Jak dotazník vyplňovat</h3>
             <section class="accordion">
                 <p>
@@ -20,7 +20,7 @@
                    <b><i>„Je objekt na obrázku ________?“</i></b> <b><i>„Ano / Ne“</i></b>
                 </p>
             </section>
-        </article>
+        </article> -->
         <form method="POST" id="attribute-form" class="article-grid highlight">
             <div class="attribute-toggle">
                 <h4 class="attribute-toggle-title">{{ attributes[0] }}</h4>
@@ -142,7 +142,7 @@
                     <span></span>
                 </div>
             </div>
-            <button id="submit" type="submit" disabled onclick="post_request()">Odeslat</button>
+            <button id="submit" type="submit" class="color-2" disabled onclick="post_request()">Odeslat</button>
             <input type="hidden" name="imageID" value="{{ image_ID }}">
             <input type="hidden" name="requestID" value="{{ request_ID }}">
         </form>
