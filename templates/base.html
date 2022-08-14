@@ -75,6 +75,9 @@
             }
             document.addEventListener("DOMContentLoaded", function(){
                 var url = new URL(window.location.href).pathname
+                if (url == "/form2/guide") {
+                    url = "/form2";
+                }
                 document.getElementById(url).style.borderBottom = "solid 3px #107980";
                 document.getElementById(url).style.textShadow = "none";
             });
