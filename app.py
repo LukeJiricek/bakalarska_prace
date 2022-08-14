@@ -270,6 +270,7 @@ def generate_objects_min_list():
         new_min_object["id"] = object["id"]
         new_min_object["filename"] = object["filename"]
         new_min_object["link"] = object["link"]
+        new_min_object["type"] = object["type"]
         for key in object["attributes"]:
             new_min_object[key] = object["attributes"][key]["Value"]
         objects_min_list.append(new_min_object)
@@ -353,7 +354,6 @@ def download_csv():
 # MAIN PAGES
 @app.route("/")
 def index():
-    generate_zip()
     return render_template("index.html")
 
 
