@@ -942,13 +942,13 @@
             },
             "Černý": {
                 "Value": 1.0,
-                "true": 4,
+                "true": 5,
                 "false": 0
             },
             "Červený": {
                 "Value": 0.0,
                 "true": 0,
-                "false": 4
+                "false": 5
             },
             "Oranžový": {
                 "Value": 0.0,
@@ -988,7 +988,7 @@
             "Zlatý": {
                 "Value": 0.0,
                 "true": 0,
-                "false": 4
+                "false": 5
             },
             "Dřevěný": {
                 "Value": 0.0,
@@ -1013,7 +1013,7 @@
             "Polstrovaný": {
                 "Value": 0.0,
                 "true": 0,
-                "false": 4
+                "false": 5
             },
             "Vyplétaný": {
                 "Value": 1.0,
@@ -1073,12 +1073,12 @@
             "Ostrý": {
                 "Value": 0.0,
                 "true": 0,
-                "false": 4
+                "false": 5
             },
             "Lesklý": {
                 "Value": 0.0,
                 "true": 0,
-                "false": 4
+                "false": 5
             },
             "Matný": {
                 "Value": 1.0,
@@ -1087,7 +1087,7 @@
             },
             "Natřený": {
                 "Value": 1.0,
-                "true": 4,
+                "true": 5,
                 "false": 0
             },
             "Nalakovaný": {
@@ -1127,7 +1127,7 @@
             },
             "Nízký ": {
                 "Value": 1.0,
-                "true": 4,
+                "true": 5,
                 "false": 0
             },
             "Široký": {
@@ -1161,9 +1161,9 @@
                 "false": 0
             },
             "Nepohodlný": {
-                "Value": 1.0,
+                "Value": 0.8,
                 "true": 4,
-                "false": 0
+                "false": 1
             },
             "Zvláštní": {
                 "Value": 0.0,
@@ -1186,9 +1186,9 @@
                 "false": 4
             },
             "Krásný": {
-                "Value": 1.0,
+                "Value": 0.8,
                 "true": 4,
-                "false": 0
+                "false": 1
             },
             "Nevkusný": {
                 "Value": 0.0,
@@ -1217,7 +1217,7 @@
             },
             "Elegantní": {
                 "Value": 1.0,
-                "true": 4,
+                "true": 5,
                 "false": 0
             },
             "Staromódní": {
@@ -1331,8 +1331,8 @@
                 "false": 4
             },
             "Koupelnový": {
-                "Value": 0.0,
-                "true": 0,
+                "Value": 0.2,
+                "true": 1,
                 "false": 4
             },
             "Zahradní": {
