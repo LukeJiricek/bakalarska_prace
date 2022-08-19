@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(340deg, #e6d6be, #e3d0bb, #dfcbb8, #dbc5b5, #d7c0b2, #d3bbb1, #ceb7af, #c9b3ae, #c2afac, #bcabab, #b4a7a8, #ada3a5);
+    background-image: linear-gradient(336deg, #ede1cf, #eadccb, #e6d6c7, #e3d1c4, #dfccc0, #dbc7be, #d6c2bc, #d1beba, #cbbab8, #c4b5b5, #bdb1b2, #b6adaf);
     margin: 0;
     display: flex;
     flex-direction: column;
