@@ -217,6 +217,7 @@ main section {
     font-size: 1em;
     padding-left: 10px;
     border-radius: 8px;
+    border: 2px solid #76A1A7;
 }
 
 #attribute-form > *{
