@@ -11,11 +11,12 @@ class Image(db.Model):
     title = db.Column(db.String(100))
     author = db.Column(db.String(50))
     answer = db.relationship("Answer")
+    answer2 = db.relationship("Answer2")
 
 
 class Http_request(db.Model):
-    request_id = db.Column(db.String(50), primary_key=True, unique=True)
-    image_id = db.Column(db.Integer)
+    request_id = db.Column(db.String(50), primary_key=True)
+    image_id = db.Column(db.Integer, db.ForeignKey("image.id"))
     timestamp = db.Column(db.String(100), server_default=FetchedValue())
     attributes = db.Column(db.ARRAY(db.String))
 
