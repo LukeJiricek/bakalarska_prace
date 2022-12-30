@@ -455,6 +455,9 @@ button[disabled]{
     #attribute-form {
         grid-template-columns: 1fr;
     }
+    .text-center {
+        grid-column: auto;
+    }
 
     #submit {
         grid-column: 1 / 2;

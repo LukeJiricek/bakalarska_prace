@@ -277,6 +277,9 @@ def generate_objects_min_list():
     return objects_min_list
 
 
+
+
+
 def generate_json():
     objects_list = generate_objects_list()
     with open("download/dataset.json", "w", encoding="utf8") as outfile:
@@ -354,6 +357,7 @@ def download_csv():
 # MAIN PAGES
 @app.route("/")
 def index():
+
     return render_template("index.html")
 
 
@@ -418,3 +422,30 @@ def form2():
         title=new_image.title,
         attributes=attributes,
     )
+
+# FOR TESTING:
+# def generate_objects_min_list_numberOfAnswers():
+#     with app.app_context():
+#         objects_list = generate_objects_list()
+#         objects_min_list = []
+#         for object in objects_list:
+#             new_min_object = {}
+#             new_min_object["id"] = object["id"]
+#             new_min_object["filename"] = object["filename"]
+#             new_min_object["link"] = object["link"]
+#             new_min_object["type"] = object["type"]
+#             for key in object["attributes"]:
+#                 new_min_object[key] = object["attributes"][key][True]+object["attributes"][key][False]
+#             objects_min_list.append(new_min_object)
+#         return objects_min_list
+
+# def generate_csv_numberOfAnswers():
+#     with app.app_context():
+#         min_csv_list = generate_objects_min_list_numberOfAnswers()
+#         keys = min_csv_list[0].keys()
+#         with open("download/dataset-test.csv", "w", newline="", encoding="utf8") as output_file:
+#             dict_writer = csv.DictWriter(output_file, keys)
+#             dict_writer.writeheader()
+#             dict_writer.writerows(min_csv_list)
+#         return "dataset-test.csv"
+# generate_csv_numberOfAnswers()
