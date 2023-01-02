@@ -6,13 +6,12 @@ OBRÁZKOVÝ DATASET S ATRIBUTY
 
 KOMPLETNÍ DATASET
 - ZIP obsahující:
-    - Kompletní JSON data
-    - Zjednodušená JSON data
+    - JSON data
     - CSV data
     - img.zip - soubor obsahující všechny obrázky
 
 
-KOMPLETNÍ JSON DATA - popis dat
+JSON DATA - popis dat
 - "id" : označuje identifikační číslo objektu
 - "source" : zdroj objektu v rámci creative commons licence
 - "author": autor obrázku
@@ -29,16 +28,7 @@ KOMPLETNÍ JSON DATA - popis dat
         - počet záporných odpovědí (Tazatel uvedl, že daná vlastnost nepopisuje objekt)
 
 
-ZJEDNODUŠENÁ JSON DATA - popis dat
-- "id" : označuje identifikační číslo objektu
-- "Objekt" : odkaz na obrázek objektu
-- Seznam atributů s hodnotou v rozpětí 0.00 a 1.00 popisující nakolik daná vlastnost popisuje objekt (počet kladných odpovědí / počet všech odpovědí):
-    - 1.00 = každý tazatel uvedl, že vlastnost popisuje objektu
-    - okolo 0.50 = tazatelé byli nerozhodní, jestli daná vlastnost popisuje objekt
-    - 0.00 = každý tazatel uvedl, že vlasnost nepopisuje objekt
-
-
-ZJEDNODUŠENÁ CSV DATA - popis dat
+CSV DATA - popis dat
 - "id" : označuje identifikační číslo objektu
 - "Objekt" : odkaz na obrázek objektu
 - Seznam atributů s hodnotou v rozpětí 0.00 a 1.00 popisující nakolik daná vlastnost popisuje objekt (počet kladných odpovědí / počet všech odpovědí):
