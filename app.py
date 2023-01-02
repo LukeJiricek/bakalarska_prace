@@ -330,7 +330,7 @@ def generate_zip():
         return "dataset.zip"
 
 
-job = scheduler.add_job(generate_zip, "interval", minutes=30)
+job = scheduler.add_job(generate_zip, "interval", minutes=1)
 
 
 # DOWNLOAD PAGES
